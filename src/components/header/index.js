@@ -46,7 +46,7 @@ const Header = ({toggle}) => {
         <IconContext.Provider value={{color: '#fff'}}>
             <Nav scrollNav={scrollNav}>
                 <HeaderContainer>
-                    <Logo to="/" onClick={toggleHome}>Gurpreet Singh</Logo>
+                    <Logo to="/" onClick={toggleHome}>GS</Logo>
                     <MobileIcon onClick={toggle}>
                         <FaBars />
                     </MobileIcon>
