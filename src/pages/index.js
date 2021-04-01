@@ -2,14 +2,18 @@ import React, { useState } from 'react'
 import Sidepanel from '../components/sidepanel'
 import Header from '../components/header'
 import ContentSection from '../components/content'
-import InfoSection from '../components/content/InfoSection'
+// import InfoSection from '../components/content/InfoSection'
 import Footer from '../components/footer'
 
 // Import data
-import { homeObjOne, homeObjThree, homeObjTwo } from '../components/content/InfoSection/Data'
+// import { homeObjOne, homeObjThree, homeObjTwo } from '../components/content/InfoSection/Data'
 import {
     data as footerData
-} from '../data/footer';
+} from '../data/footer'
+
+import {
+    data as coverData
+} from '../data/cover'
 
 const Home = () => {
     const [isOpen, setIsOpen] = useState(false)
@@ -20,10 +24,10 @@ const Home = () => {
         <>
             <Header toggle={toggle}/>
             <Sidepanel isOpen={isOpen} toggle={toggle}/>
-            <ContentSection />
-            <InfoSection {...homeObjOne}/>
+            <ContentSection {...coverData}/>
+            {/* <InfoSection {...homeObjOne}/>
             <InfoSection {...homeObjTwo}/>
-            <InfoSection {...homeObjThree}/>
+            <InfoSection {...homeObjThree}/> */}
             <Footer {...footerData}/>
         </>
     )

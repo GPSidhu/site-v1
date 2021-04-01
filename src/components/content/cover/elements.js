@@ -1,13 +1,13 @@
 import styled from 'styled-components'
-//import BackgroundImage from '/public/images/hubbleDeepField.jpeg'
-//contentBg.jpeg'
+import * as COLORS from '../../../constants/colors'
+import * as FONTS from '../../../constants/fonts'
 import {
     MdArrowForward,
     MdKeyboardArrowRight
 } from 'react-icons/md'
 
-export const ContentContainer = styled.div`
-    background: #0c0c0c;
+export const CoverContainer = styled.div`
+    background: ${props => props.coverBg || COLORS.COVER_BG};
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,10 +26,9 @@ export const ContentContainer = styled.div`
         background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.6) 100%),
         linear-gradient(180deg, rgba(0,0,0,0.2) 0%, transparent 100%);
         z-index: 2;
-    }
-`
+    }`
 
-export const ContentBg = styled.div`
+export const CoverBg = styled.div`
     position: absolute;
     top: 0;
     right: 0;
@@ -38,7 +37,7 @@ export const ContentBg = styled.div`
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background: #2e4157;
+    //background: #2e4157;
 
     //background-image: url(${''});
 
@@ -48,20 +47,13 @@ export const ContentBg = styled.div`
     background-size: cover;
 `
 
-export const VideoBg = styled.video`
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
-    background: #232a34;
-`
 export const ImageBg = styled.img`
     width: 100%;
     height: 100%;
     //position: fixed;
     // -o-object-fit: cover;
     // object-fit: cover;
-    background: #232a34;
+    //background: #232a34;
 `
 
 export const Content = styled.div`
@@ -71,7 +63,7 @@ export const Content = styled.div`
     padding: 8px 24px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
 `
 
 export const ContentH1 = styled.h1`
@@ -88,10 +80,10 @@ export const ContentH1 = styled.h1`
 `
 
 export const ContentP = styled.p`
-    margin-top: 24px;
+    // margin-top: 24px;
     color: #fff;
-    font-size: 24px;
-    text-align: center;
+    font-size: ${props => FONTS.TEXT[props.size] || FONTS.TEXT.sm};
+    //text-align: center;
     max-width: 600px;
 
     @media screen and (max-width: 768px) {
