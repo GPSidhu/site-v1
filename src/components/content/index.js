@@ -1,32 +1,24 @@
 import React, { useState } from 'react'
 import Cover from './cover'
+import Experience from './experience'
+import InfoSection from './InfoSection'
 
-import {
-    ContentContainer,
-    ContentBg,
-    // VideoBg,
-    ImageBg,
-    Content,
-    ContentP,
-    ContentH1,
-    ArrowForward,
-    ArrowRight,
-    BtnWrapper
-} from './elements'
-import Button from '../ButtonElement';
-// import video from '../../assets/videos/Video.mp4'
-//import BackgroundImage from '../../assets/images/contentBg.jpeg'
+import { homeObjOne, homeObjThree, homeObjTwo } from './InfoSection/Data'
 
+const ContentSection = ({data}) => {
+    const {cover, experience } = data;
+    // const [hover, setHover] = useState(false);
 
-const ContentSection = (props) => {
-    const [hover, setHover] = useState(false);
-
-    const onHover = () => {
-        setHover(!hover)
-    }
+    // const onHover = () => {
+    //     setHover(!hover)
+    // }
 
     return (
-        <Cover {...props}/>
+        <>
+        <Cover {...cover}/>
+        <InfoSection {...homeObjOne}/>
+        <Experience />
+        </>
     )
     // return (
     //     <ContentContainer>

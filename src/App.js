@@ -12,8 +12,8 @@ function App() {
     <Router>
       <Switch>
         <Route path="/" component={Home} exact></Route>
-        {/* <Route path="/resume" component={Resume} exact></Route>
-        <Route path="/blog" component={Blog} exact></Route> */}
+        <Route path="/resume" component={Resume} exact></Route>
+        <Route path="/blog" component={Blog} exact></Route>
       </Switch>
     </Router>
   );

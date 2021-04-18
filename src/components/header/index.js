@@ -21,7 +21,7 @@ const menuItems = [
     {id: 'experience', label: 'Experience', type: 'link'},
     {id: 'projects', label: 'Projects', type: 'link'},
     {id: 'contact', label: 'Contact', type: 'link'},
-    {id: 'resume', label: 'Resume', type: 'link'},
+    {id: 'resume', label: 'Resume', type: 'button'},
     {id: 'blog', label: 'Blog', type: 'button'}
 ]
 const Header = ({toggle}) => {

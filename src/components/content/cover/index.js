@@ -3,7 +3,6 @@ import {
     CoverContainer,
     CoverBg,
     ImageBg,
-
     Content,
     ContentH1,
     ContentP,
