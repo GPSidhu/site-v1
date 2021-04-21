@@ -10,7 +10,7 @@ import Timeline from './timeline'
 
 const Experience = ({title, jobs}) => {
     return (
-        <SectionContainer id={'experience'}>
+        <SectionContainer id={'experience'} lightBg={false}>
             <SectionWrapper>
                 <SectionTitle>{title}</SectionTitle>
                 <Timeline jobs={jobs}/>

@@ -6,11 +6,9 @@ import Content from '../components/content'
 import Footer from '../components/footer'
 
 // Import data
-
 import {
     data as footerData
 } from '../data/footer'
-
 import {
     data as coverData
 } from '../data/cover'
@@ -18,10 +16,14 @@ import {
 import {
     data as experienceData
 } from '../data/experience'
+import {
+    data as aboutData
+} from '../data/about'
 
 const data = {
     cover: coverData,
-    experience: experienceData
+    experience: experienceData,
+    about: aboutData
 }
 
 const Home = () => {
