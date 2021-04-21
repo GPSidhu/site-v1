@@ -12,10 +12,9 @@ export const CoverContainer = styled.div`
     justify-content: center;
     align-items: center;
     padding: 0 30px;
-    height: 800px;
+    height: 100vh; //800px;
     position: relative;
-    z-index: 1;
-
+      
     :before {
         content: '';
         position: absolute;
@@ -26,34 +25,39 @@ export const CoverContainer = styled.div`
         background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.6) 100%),
         linear-gradient(180deg, rgba(0,0,0,0.2) 0%, transparent 100%);
         z-index: 2;
-    }`
+    }
+    `
 
 export const CoverBg = styled.div`
     position: absolute;
-    top: 0;
+    top: 0; 
+    // {({top}) => -top*0.25 + 'px'};
     right: 0;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 100%;
     overflow: hidden;
-    //background: #2e4157;
-
-    //background-image: url(${''});
+    //background: #2e4157; 
 
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
 `
 
 export const ImageBg = styled.img`
     width: 100%;
     height: 100%;
     //position: fixed;
+    background-image: url('/images/contentBg.jpeg');
     // -o-object-fit: cover;
     // object-fit: cover;
     //background: #232a34;
+    pointer-events: none;
 `
 
 export const Content = styled.div`
