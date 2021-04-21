@@ -19,7 +19,7 @@ const Cover = ({backgroundColor, backgroundImage, lines, showLink}) => {
                 </CoverBg>
                 <Content>
                     {lines && lines.map((line, i) => (
-                        <ContentP size={line.size}>{line.text}</ContentP>
+                        <ContentP key={`cp_${i}`} size={line.size}>{line.text}</ContentP>
                     ))}
                     {/* <ContentH1>About</ContentH1> */}
                     {showLink && 

@@ -16,8 +16,8 @@ const ContentSection = ({data}) => {
     return (
         <>
         <Cover {...cover}/>
-        <InfoSection {...homeObjOne}/>
-        <Experience />
+        {/* <InfoSection {...homeObjOne}/> */}
+        <Experience {...experience}/>
         </>
     )
     // return (

@@ -52,14 +52,14 @@ const Header = ({toggle}) => {
                     </MobileIcon>
                     <HeaderMenu>
                         {
-                            menuItems.map((item) => {
+                            menuItems.map((item, index) => {
                                 if (item.type === 'link')
-                                    return (<MenuItem>
+                                    return (<MenuItem key={`menu_item_${index}`}>
                                             <LinkItem to={item.id}>{item.label}</LinkItem>
                                         </MenuItem>)
                                 
                                 if (item.type === 'button')
-                                    return (<MenuButton>
+                                    return (<MenuButton key={`menu_item_${index}`}>
                                         <MenuButtonLink to={item.id}>{item.label}</MenuButtonLink>
                                     </MenuButton>)
                                 return []

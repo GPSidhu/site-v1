@@ -5,7 +5,7 @@ import * as COLORS from '../../constants/colors';
 
 export const Nav = styled.nav`
     position: fixed;
-    background: ${({scrollNav}) => (scrollNav ? COLORS.BASE1 : 'transparent')};
+    background: ${({scrollNav}) => (scrollNav ? COLORS.BLACK : 'transparent')};
     width:100%;
     height: 80px;
     display: flex;
