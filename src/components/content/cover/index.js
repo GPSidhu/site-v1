@@ -4,7 +4,7 @@ import {
     CoverBg,
     ImageBg,
     Content,
-    ContentH1,
+    // ContentH1,
     ContentP,
     BtnWrapper
 } from './elements'

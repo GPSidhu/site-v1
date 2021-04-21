@@ -1,11 +1,12 @@
 import styled from 'styled-components'
 
-export const SectionTitle = styled.h1`
+export const SectionTitle = styled.h3`
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-self: flex-start;
     align-items: center;
-    //padding: 1rem;
+    margin-top: 36px;
+    margin-left: 24px;
 `
 
 export default SectionTitle

@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import { Component } from 'react'
 import styled from 'styled-components'
 import {
     FaChevronCircleRight,
@@ -6,8 +6,10 @@ import {
 } from 'react-icons/fa'
 
 const ClpsContainer = styled.div`
-    a {
+    button {
         cursor: pointer;
+        background: transparent;
+        border: none;
     }
     .panel-title {
         font-size: 16px;
@@ -24,7 +26,7 @@ const ClpsContainer = styled.div`
         max-height: 0;
     }
 `
-class Collapser extends React.Component {
+class Collapser extends Component {
     constructor(props) {
       super(props);
       this.state = {
@@ -37,10 +39,10 @@ class Collapser extends React.Component {
           <ClpsContainer>
             <div className="panel-heading">
               <h4 className="panel-title">
-                <a href={null}
+                <button
                   onClick={function(){this.setState({expanded:!this.state.expanded})}.bind(this)} >
                     {this.state.expanded ? <FaChevronCircleDown /> : <FaChevronCircleRight /> }
-                  </a>
+                  </button>
               </h4>
             </div>
             <div className={this.state.expanded ? "panel-collapse": "panel-collapse panel-close"}>

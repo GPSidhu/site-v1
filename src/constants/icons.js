@@ -19,9 +19,9 @@ import {
     SiJavascript
 } from 'react-icons/si'
 
-import {
-    AiOutlineConsoleSql
-} from 'react-icons/ai'
+// import {
+//     AiOutlineConsoleSql
+// } from 'react-icons/ai'
 
 import {
     MdEmail,

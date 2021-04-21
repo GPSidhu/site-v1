@@ -10,6 +10,7 @@ const TimelineContainer = styled.div`
 `
 const CenterLine = styled.div`
     border: 2px solid aqua;
+    border-radius: 4px;
     height: 75%;
     min-height: 600px;
     width: 2px;
