@@ -1,8 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import About from './about'
 import Cover from './cover'
 import Experience from './experience'
-import InfoSection from './about'
 
 // import { homeObjOne, homeObjThree, homeObjTwo } from './about/Data'
 
@@ -17,7 +16,7 @@ const ContentSection = ({data}) => {
     return (
         <>
         <Cover {...cover}/>
-        <InfoSection {...about}/>
+        <About {...about}/>
         <Experience {...experience}/>
         </>
     )

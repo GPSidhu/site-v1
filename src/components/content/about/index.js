@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import {
     SectionContainer,
     SectionWrapper,
-    SectionTitle,
+    // SectionTitle,
 } from '../../common'
 
 export const InfoRow = styled.div`
@@ -93,7 +93,7 @@ export const Img = styled.img`
     }
 `
 
-function InfoSection({ 
+function About({ 
     lightBg,
     darkText,
     id,
@@ -134,4 +134,4 @@ function InfoSection({
     )
 }
 
-export default InfoSection
+export default About
