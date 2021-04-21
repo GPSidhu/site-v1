@@ -1,4 +1,4 @@
-import React from 'react'
+import React,  { useEffect, useState } from 'react'
 import {
     CoverContainer,
     CoverBg,
@@ -11,11 +11,23 @@ import {
 import Button from '../../common/Button';
 
 const Cover = ({backgroundColor, backgroundImage, lines, showLink}) => {
+    // const [scrollTop, setScrollTop] = useState(false)
+
+    // const updateCoverBg = () => {
+    //     let top = window.scrollY || 0;
+    //     setScrollTop(top);
+    // }
+
+    // useEffect(() => {
+    //     window.addEventListener('scroll', updateCoverBg)
+    // }, [])
+
     return (
         <div>
             <CoverContainer coverBg={backgroundColor}>
+                 {/* top={scrollTop}> */}
                 <CoverBg>
-                    {backgroundImage && <ImageBg src={backgroundImage}></ImageBg>}
+                    {backgroundImage && <ImageBg></ImageBg>}
                 </CoverBg>
                 <Content>
                     {lines && lines.map((line, i) => (
