@@ -15,7 +15,7 @@ import {
 } from './elements'
 
 import {
-    ICON_COMPONENT_MAP
+    SOCIAL_ICON_COMP_MAP
 } from '../../constants/icons'
 
 const Footer = ({links, contacts, rights}) => {
@@ -25,7 +25,7 @@ const Footer = ({links, contacts, rights}) => {
                 <FooterLinksContainer>
                     <FooterLinksWrapper>
                         <FooterLinkItems>
-                            {links.map((item) => <FooterLink to={item.to}>{item.label}</FooterLink>)}
+                            {links.map((item, index) => <FooterLink key={`flink_${index}`} to={item.to}>{item.label}</FooterLink>)}
                         </FooterLinkItems>
                     </FooterLinksWrapper>
                 </FooterLinksContainer>
@@ -34,9 +34,9 @@ const Footer = ({links, contacts, rights}) => {
                         {/* <SocialLogo to="/">GS</SocialLogo> */}
                         <WebsiteRights>{`© ${new Date().getFullYear()} ${rights}`}</WebsiteRights>
                         <SocialIcons>
-                            {contacts.map((contact) => 
-                            <SocialIconLink href={contact.href} target="_blank" aria-label={contact.label}>
-                                {ICON_COMPONENT_MAP[contact.id]}
+                            {contacts.map((contact, index) => 
+                            <SocialIconLink key={`slink_${index}`} href={contact.href} target="_blank" aria-label={contact.label}>
+                                {SOCIAL_ICON_COMP_MAP[contact.id]}
                             </SocialIconLink>
                             )}
                         </SocialIcons>

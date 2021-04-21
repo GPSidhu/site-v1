@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-
+import * as COLORS from '../../constants/colors';
 export const SectionContainer = styled.div`
     color: #fff;
     display: flex;
