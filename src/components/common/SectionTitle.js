@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const SectionTitle = styled.h3`
     display: flex;
     flex-direction: row;
-    justify-self: center; //flex-start;
+    justify-self: flex-start;
     align-items: center;
     margin-top: 36px;
     margin-left: 24px;

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import {
     SectionContainer,
@@ -109,17 +109,6 @@ function About({
     dark,
     dark2
  }) {
-    // const [scrollTop, setScrollTop] = useState(false)
-
-    // const updateCoverBg = () => {
-    //     let top = window.scrollY || 0;
-    //     setScrollTop(top);
-    // }
-
-    // useEffect(() => {
-    //     window.addEventListener('scroll', updateCoverBg)
-    // }, [])
-
     return (
         <>
             <SectionContainer lightBg={lightBg} id={id}>
