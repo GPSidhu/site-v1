@@ -16,11 +16,11 @@ const CardContainer = styled.div`
 `
 const CardHeader = styled.div`
     display: flex;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid aqua;
 `
 const Heading1 = styled.span`
     font-weight: 500;
-    color: black;
+    color: #fff; // black;
     font-size: 18px;
     flex: 1;
 `
@@ -74,9 +74,7 @@ function Jobcard({job}) {
              <CardContainer>
                 <Card 
                     header={renderCardheader(job)}
-                    body={renderCardBody(job)} 
-                    footer={renderCardFooter(job)}
-                     />
+                    footer={renderCardFooter(job)}>{renderCardBody(job)}</Card>
             </CardContainer>
     )
 }

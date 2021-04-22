@@ -1,4 +1,4 @@
-export const data = {
+const data = {
     rights: 'Designed and built by Gurpreet Singh. All rights reserved.',
     links: [
         // to do: create link pages
@@ -14,3 +14,4 @@ export const data = {
     ]
 }
 
+export default data

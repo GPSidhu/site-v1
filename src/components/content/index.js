@@ -2,11 +2,11 @@ import React from 'react'
 import About from './about'
 import Cover from './cover'
 import Experience from './experience'
-
+import Projects from './projects'
 // import { homeObjOne, homeObjThree, homeObjTwo } from './about/Data'
 
 const ContentSection = ({data}) => {
-    const {cover, experience, about } = data;
+    const {cover, experience, about, projects } = data;
     // const [hover, setHover] = useState(false);
 
     // const onHover = () => {
@@ -18,6 +18,7 @@ const ContentSection = ({data}) => {
         <Cover {...cover}/>
         <About {...about}/>
         <Experience {...experience}/>
+        <Projects {...projects} />
         </>
     )
     // return (

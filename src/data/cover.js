@@ -1,4 +1,4 @@
-export const data = {
+const data = {
     backgroundColor: '',
     backgroundImage: '/images/contentBg.jpeg',
     lines: [
@@ -10,3 +10,4 @@ export const data = {
     ],
     showLink: false
 }
+export default data

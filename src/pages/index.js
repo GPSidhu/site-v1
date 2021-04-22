@@ -6,24 +6,36 @@ import Content from '../components/content'
 import Footer from '../components/footer'
 
 // Import data
-import {
-    data as footerData
-} from '../data/footer'
-import {
-    data as coverData
-} from '../data/cover'
+// import {
+//     data as footerData
+// } from '../data/footer'
+// import {
+//     data as coverData
+// } from '../data/cover'
+
+// import {
+//     data as experienceData
+// } from '../data/experience'
+// import {
+//     data as aboutData
+// } from '../data/about'
+// import {
+//     data as projectsData
+// } from '../data/projects'
 
 import {
-    data as experienceData
-} from '../data/experience'
-import {
-    data as aboutData
-} from '../data/about'
+    CoverData,
+    AboutData,
+    ExperienceData,
+    ProjectsData,
+    FooterData
+} from '../data'
 
 const data = {
-    cover: coverData,
-    experience: experienceData,
-    about: aboutData
+    cover: CoverData,
+    experience: ExperienceData,
+    about: AboutData,
+    projects: ProjectsData
 }
 
 const Home = () => {
@@ -36,7 +48,7 @@ const Home = () => {
             <Header toggle={toggle}/>
             <Sidepanel isOpen={isOpen} toggle={toggle}/>
             <Content data={data}/>
-            <Footer {...footerData}/>
+            <Footer {...FooterData}/>
         </>
     )
 }

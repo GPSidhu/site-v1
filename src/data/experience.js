@@ -1,4 +1,4 @@
-export const data = {
+const data = {
         title: 'Experience',
         jobs: [
             {
@@ -62,5 +62,8 @@ export const data = {
                     'c++', 'linux'
                 ]
             }
-        ]
+        ],
+        lightBg: false
 }
+
+export default data
