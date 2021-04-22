@@ -2,15 +2,16 @@ import React from 'react'
 import styled from 'styled-components'
 
 const bgColor = 'red'
-const CardContainer = styled.div`
+const CardWrapper = styled.div`
     display: flex;
     flex-direction: column;
     height: 100%;
     width: 100%;
-    background: darkgray; //linear-gradient(45deg, #fff, transparent);
+    background: black; //darkgray; //linear-gradient(45deg, #fff, transparent);
     //border: 1px solid black;
-    color: black;
-    //border-radius: 6px;
+    color: #fff;
+    border-radius: 6px;
+    border: 1px dotted aqua;
     //box-shadow: 12px 12px grey;
     padding: 1rem;
     max-height: 380px;
@@ -29,6 +30,7 @@ const CardHeader = styled.div`
     //border: 1px dotted black;
     margin-bottom: 8px;
     flex: 0;
+    color: #fff;
 `
 
 const CardFooter = styled.div`
@@ -43,13 +45,13 @@ const CardBody = styled.div`
     font-size: 12px;
 `
 
-const Card = ({header, footer, body}) => {
+const Card = ({header, footer, children}) => {
     return (
-        <CardContainer>
+        <CardWrapper>
             <CardHeader>{header}</CardHeader>
-            <CardBody>{body}</CardBody>
+            <CardBody>{children}</CardBody>
             <CardFooter>{footer}</CardFooter>
-        </CardContainer>
+        </CardWrapper>
     )
 }
 

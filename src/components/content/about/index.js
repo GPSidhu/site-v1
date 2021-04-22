@@ -111,7 +111,7 @@ function About({
  }) {
     return (
         <>
-            <SectionContainer lightBg={lightBg} id={id}>
+            <SectionContainer lightBg={lightBg} id={id} style={{height: '960px'}}>
                 <SectionWrapper>
                     {/* <SectionTitle>{topLine}</SectionTitle> */}
                     <InfoRow imgStart={imgStart}>

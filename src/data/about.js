@@ -1,4 +1,4 @@
-export const data = {
+const data = {
     id: 'about',
     lightBg: true,
     lightText: false,
@@ -15,3 +15,5 @@ export const data = {
     primary: true,
     darkText: true 
 };
+
+export default data

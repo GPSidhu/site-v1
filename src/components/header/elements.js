@@ -12,7 +12,7 @@ export const Nav = styled.nav`
     justify-content: center;
     align-items: center;
     font-size: 1rem;
-    postion: sticky;
+    //position: sticky;
     top: 0;
     z-index: 10;
 
@@ -97,7 +97,7 @@ export const LinkItem = styled(LinkScroll)`
 export const MenuButton = styled.nav`
     display: flex;
     align-items: center;
-
+    padding: 0 1rem;
     @media screen and (max-width: 768px) {
         display: none;
     }

@@ -6,10 +6,12 @@ import {
 } from 'react-icons/fa'
 
 const ClpsContainer = styled.div`
+    
     button {
         cursor: pointer;
         background: transparent;
         border: none;
+        color: aqua;
     }
     .panel-title {
         font-size: 16px;
