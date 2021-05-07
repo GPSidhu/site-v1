@@ -6,14 +6,25 @@ import {
 import Home from './pages'
 import Blog from './pages/blog'
 import Resume from './pages/resume'
+import { ThemeProvider } from 'styled-components'
+import {
+  Nature,
+  // Traditional
+} from './constants/colors'
+
+const theme = {
+  main: Nature
+}
 
 function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/" component={Home} exact></Route>
-        <Route path="/resume" component={Resume} exact></Route>
-        <Route path="/blog" component={Blog} exact></Route>
+        <ThemeProvider theme={theme}>
+          <Route path="/" component={Home} exact></Route>
+          <Route path="/resume" component={Resume} exact></Route>
+          <Route path="/blog" component={Blog} exact></Route>
+        </ThemeProvider>
       </Switch>
     </Router>
   );

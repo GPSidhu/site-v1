@@ -15,10 +15,10 @@ const ContentSection = ({data}) => {
 
     return (
         <>
-        <Cover {...cover}/>
-        <About {...about}/>
-        <Experience {...experience}/>
-        <Projects {...projects} />
+        <Cover {...cover} seq={1} />
+        <About {...about} seq={2} />
+        <Experience {...experience} seq={3} />
+        <Projects {...projects} seq={4} />
         </>
     )
     // return (

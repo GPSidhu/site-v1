@@ -9,7 +9,6 @@ import {
     SocialMedia,
     SocialMediaWrapper,
     SocialIcons,
-    // SocialLogo,
     SocialIconLink,
     WebsiteRights
 } from './elements'

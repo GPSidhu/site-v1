@@ -32,6 +32,10 @@ const data = {
                 video: '',
                 code: 'https://github.com/GPSidhu/chess'
             },
+            snapshots: [
+                '/chess/chess_1.png',
+                '/flappy-bird/flappy_bird_2.png',
+            ],
             cover: '/chess/chess_1.png'
         },
         {
@@ -45,6 +49,11 @@ const data = {
                 video: '',
                 code: 'https://github.com/GPSidhu/site-v1'
             },
+            snapshots: [
+                '/site/site_1.png',
+                '/site/site_2.png',
+                '/site/site_3.png',
+            ],
             cover: '/site/site_1.png'
         }
     ],

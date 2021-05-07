@@ -11,7 +11,7 @@ const ClpsContainer = styled.div`
         cursor: pointer;
         background: transparent;
         border: none;
-        color: aqua;
+        color: ${({theme}) => theme.main.colorPrimary};
     }
     .panel-title {
         font-size: 16px;

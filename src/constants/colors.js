@@ -1,16 +1,33 @@
-// new
-export const COVER_BG = '#26282b';
 
-// old
 
-export const BLACK = '#010000';
-export const WHITE = '#ffffff';
-export const LIGHTGRAY = '#e6e6e6';
-export const DARKGRAY = '#333';
-export const RED = '#ff1755';
-export const BASE1 = '#26282b'; //'#2e4157';
-export const BASE1LIGHT = '#6d8bad';
-export const BASE2 = '#353941'; //'#152538';
-export const BACKGROUND = BASE1;
+/* ********** Themes *********** */
+// src - https://visme.co/blog/website-color-schemes/
 
-export const LINKHOVER = BASE1LIGHT;
+export const Traditional = {
+    bgPrimary: "#5F6366",
+    bgSecondary: "#4D6D9A",
+    textPrimary : "#EDB5BF",
+    textSecondary: "#86B3D1", 
+    borderPrimary: "#86B3D1",
+    borderSecondary: "#EDB5BF",
+    linkHover: "#86B3D1",
+    colorDark: "#5085A5",
+    colorLight: "#EDB5BF"
+}
+
+export const Nature = {
+    bgHeader: "#1a4757",
+    bgFooter: "#1a4757",
+    bgPrimary: "#95aab1", //"#31708E",
+    bgSecondary: "#7F99A1", //"#BC986A", //"#DAAD86", //"#FBEEC1", //"#687864", //"#5085A5",
+    bgTertiary: "#1a4757",
+    textPrimary : "#F7F9FB",
+    textSecondary: "#8FC1E3",
+    borderPrimary: "#F7F9FB",
+    borderSecondary: "#8FC1E3",
+    linkHover: "#8FC1E3",
+    colorPrimary: "#F7F9FB",
+    colorSecondary: "#8FC1E3",
+    colorDark: "#31708E",
+    colorLight: "#8FC1E3"
+}

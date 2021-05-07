@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import * as COLORS from '../../../constants/colors'
 import * as FONTS from '../../../constants/fonts'
 import {
     MdArrowForward,
@@ -7,7 +6,7 @@ import {
 } from 'react-icons/md'
 
 export const CoverContainer = styled.div`
-    background: ${props => props.coverBg || COLORS.COVER_BG};
+    background: ${({theme, seq}) => (seq % 2 === 0) ? theme.main.bgSecondary : theme.main.bgPrimary};
     display: flex;
     justify-content: center;
     align-items: center;
