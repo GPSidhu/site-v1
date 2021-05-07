@@ -6,10 +6,9 @@ const TimelineContainer = styled.div`
     width: 100%;
     min-width: 900px;
     position: relative;
-    //border: 2px solid red;
 `
 const CenterLine = styled.div`
-    border: 2px solid aqua;
+    border: 2px solid ${({theme}) => theme.main.bgTertiary};
     border-radius: 4px;
     height: 75%;
     min-height: 600px;
@@ -17,24 +16,20 @@ const CenterLine = styled.div`
     position: absolute;
     align-items: center;
     left: 50%;
-    //top: 24px;
     padding: 12px 0;
 `
 const TimelineSectionWrapper = styled.div`
     width: 100%;
     height: 200px;
-    //border: 1px dotted yellow;
-    //position: absolute;
     display: grid;
     grid-template-columns: 1fr 20px 1fr;
-    //flex-direction: column;
 `
 
 const LeftContainer = styled.div`
     display: flex;
     flex-direction: row;
     flex-flow: row-reverse;
-    align-items: center; //flex-end;
+    align-items: center;
     margin-right: 1rem;
 `
 
@@ -42,12 +37,12 @@ const RightContainer = styled.div`
     display: flex;
     flex-direction: row;
     flex-flow: row;
-    align-items: center; //flex-end;
+    align-items: center;
     margin-left: 1rem;
 `
 
 const Circle = styled.div`
-    background: aqua;
+    background: ${({theme}) => theme.main.bgTertiary};;
     border-radius: 50%;
     height: 24px;
     width: 24px;

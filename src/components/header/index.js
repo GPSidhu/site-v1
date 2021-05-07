@@ -24,16 +24,15 @@ const menuItems = [
     {id: 'resume', label: 'Resume', type: 'button'},
     {id: 'blog', label: 'Blog', type: 'button'}
 ]
+
 const Header = ({toggle}) => {
     const [scrollNav, setScrollnav] = useState(false);
-
     const changeNav = () => {
         if (window.scrollY >= 80)
             setScrollnav(true)
         else
             setScrollnav(false)
     }
-
     useEffect(() => {
         window.addEventListener('scroll', changeNav)
     }, [])

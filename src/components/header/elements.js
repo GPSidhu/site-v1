@@ -1,23 +1,22 @@
 import styled from 'styled-components'
 import { Link as LinkRouter } from 'react-router-dom'
 import { Link as LinkScroll } from 'react-scroll'
-import * as COLORS from '../../constants/colors';
 
 export const Nav = styled.nav`
     position: fixed;
-    background: ${({scrollNav}) => (scrollNav ? COLORS.BLACK : 'transparent')};
+    background: ${({scrollNav, theme}) =>(scrollNav ? theme.main.bgHeader: 'transparent')};
     width:100%;
     height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1rem;
-    //position: sticky;
     top: 0;
     z-index: 10;
+    transition: background 850ms ease-in, opacity 750ms ease-in-out;
 
     @media screen and (max-width: 960px) {
-        transition: 0.8s all ease;
+        transition: 1s all ease;
     }
 `
 
@@ -32,17 +31,18 @@ export const HeaderContainer = styled.div`
 `
 
 export const Logo = styled(LinkRouter)`
-    color: #fff;
+    color: ${({theme}) => theme.main.textPrimary};
+    font-family: 'Dancing Script', cursive;
     justify-self: flex-start;
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     display: flex;
     align-items: center;
     margin-left: 24px;
     font-weight : bold;
     text-decoration: none;
     &:hover {
-        color: ${COLORS.LINKHOVER};
+        color: ${({theme}) => theme.main.textPrimary};
     }
 `
 
@@ -57,7 +57,7 @@ export const MobileIcon = styled.div`
         transform: translate(-100%, 60%);
         font-size: 1.8rem;
         cursor: pointer;
-        color: #fff;
+        color: ${({theme}) => theme.main.textPrimary};
     }
 `
 
@@ -74,11 +74,10 @@ export const HeaderMenu = styled.ul`
 `
 
 export const MenuItem = styled.li`
-    //height: 80px;
 `
 
 export const LinkItem = styled(LinkScroll)`
-    color: #fff;
+    color: ${({theme}) => theme.main.textPrimary};
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -87,10 +86,10 @@ export const LinkItem = styled(LinkScroll)`
     cursor: pointer;
 
     &.active {
-        border-bottom: 3px solid #01bf71;
+        border-bottom: 3px solid ${({theme}) => theme.main.textPrimary};
     }
     &:hover {
-        color: ${COLORS.LINKHOVER};
+        color: ${({theme}) => theme.main.linkHover};
     }
 `
 
@@ -105,20 +104,18 @@ export const MenuButton = styled.nav`
 
 export const MenuButtonLink = styled(LinkRouter)`
     border-radius: 8px;
-    background: #fff;
+    background: 'transparent';
     white-space: nowrap;
     padding: 10px 22px;
-    color: ${COLORS.BASE1};
+    color: ${({theme}) => theme.main.textPrimary};
     font-size: 16px;
-    border: none;
+    border: 1px dotted ${({theme}) => theme.main.colorLight};
     outline: none;
     cursor: pointer;
-    transition: al 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
     text-decoration: none;
 
     &:hover {
-        transition: all 0.2s ease-in-out;
-        background: ${COLORS.BASE1LIGHT};
-        color: #010606;
+        color: ${({theme}) => theme.main.linkHover};
     }
 `

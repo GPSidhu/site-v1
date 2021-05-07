@@ -107,11 +107,12 @@ function About({
     imgStart,
     primary,
     dark,
-    dark2
+    dark2,
+    seq
  }) {
     return (
         <>
-            <SectionContainer lightBg={lightBg} id={id} style={{height: '960px'}}>
+            <SectionContainer seq={seq} id={id} style={{height: '960px'}}>
                 <SectionWrapper>
                     {/* <SectionTitle>{topLine}</SectionTitle> */}
                     <InfoRow imgStart={imgStart}>

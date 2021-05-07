@@ -11,34 +11,35 @@ import {
 
 const CardContainer = styled.div`
     height: 150px;
-    width: 80%; //600px;
+    width: 80%;
     display: inline-grid;
 `
 const CardHeader = styled.div`
     display: flex;
-    border-bottom: 1px solid aqua;
+    border-bottom: 1px solid ${({theme}) => theme.main.borderPrimary};
 `
 const Heading1 = styled.span`
     font-weight: 500;
-    color: #fff; // black;
+    color: ${({theme}) => theme.main.textPrimary};
     font-size: 18px;
     flex: 1;
 `
 const Heading2 = styled.span`
     font-weight: bold;
     font-size: 16px;
-    color: aqua; //#a9b0ad;
+    color: ${({theme}) => theme.main.textPrimary};
     padding-left: 4px;
 `
 
 const SkillsWrapper = styled.div`
     display: flex;
     flex-direction: row;
+    border-top: 1px solid ${({theme}) => theme.main.borderPrimary};
 `
 const Skill = styled.span`
     font-size: 24px;
     padding-right: 4px;
-    color: aqua;
+    color: ${({theme}) => theme.main.textPrimary};
 `
 
 const renderCardheader = (job) => (
@@ -50,7 +51,6 @@ const renderCardheader = (job) => (
 
 const renderCardBody = (job) => (
   <div>
-    {/* <span>{`${job.from} - ${job.to}`}</span> */}
     <Collapser content={
     <ol>
       {job.tasks.map((t, i) => (<li key={`t_${i}`}>{t}</li>))}
@@ -74,7 +74,9 @@ function Jobcard({job}) {
              <CardContainer>
                 <Card 
                     header={renderCardheader(job)}
-                    footer={renderCardFooter(job)}>{renderCardBody(job)}</Card>
+                    footer={renderCardFooter(job)}>
+                    {renderCardBody(job)}
+                </Card>
             </CardContainer>
     )
 }
