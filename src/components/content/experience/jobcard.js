@@ -11,7 +11,7 @@ import {
 
 const CardContainer = styled.div`
     height: 150px;
-    width: 80%;
+    width: 100%;
     display: inline-grid;
 `
 const CardHeader = styled.div`
@@ -27,7 +27,7 @@ const Heading1 = styled.span`
 const Heading2 = styled.span`
     font-weight: bold;
     font-size: 16px;
-    color: ${({theme}) => theme.main.textPrimary};
+    color: ${({theme}) => theme.main.colorSecondary};
     padding-left: 4px;
 `
 
@@ -49,14 +49,18 @@ const renderCardheader = (job) => (
   </CardHeader>
 )
 
-const renderCardBody = (job) => (
-  <div>
-    <Collapser content={
-    <ol>
-      {job.tasks.map((t, i) => (<li key={`t_${i}`}>{t}</li>))}
-    </ol>} />
-  </div>
-)
+const renderCardBody = (job) => {
+    let expanded = false;
+    if (typeof window.innerWidth != 'undefined' && window.innerWidth < 480) {
+        expanded = true;
+    }
+    return (<div>
+        <Collapser expanded={expanded} content={
+        <ol>
+        {job.tasks.map((t, i) => (<li key={`t_${i}`}>{t}</li>))}
+        </ol>} />
+    </div>)
+}
 
 const renderCardFooter = (job) => (
     <SkillsWrapper>

@@ -16,6 +16,13 @@ export const PanelContainer = styled.aside`
     transition: 0.3s ease-in-out;
     opacity: ${({isOpen}) => (isOpen ? '100%' : '0')};
     top: ${({isOpen}) => (isOpen ? '0' : '-100%')};
+
+    overflow: hidden;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    :-webkit-scrollbar {
+        display: none;
+    }
 `
 
 export const CloseIcon = styled(FaTimes)`
@@ -27,9 +34,15 @@ export const Icon = styled.div`
     top: 1.2rem;
     right: 1.5rem;
     background: transparent;
-    font-size: 3rem;
+    font-size: 2rem;
     cursor: pointer;
     outline: none;
+    @media screen and (max-width: 320px),(max-width: 375px)  {
+        font-size: 1.5rem;
+    }
+    @media screen and (max-height: 280px) {
+        font-size: 1rem;
+    }
 `
 
 export const PanelWrapper = styled.div`
@@ -42,16 +55,19 @@ export const PanelMenu = styled.ul`
     grid-template-rows: repeat(4, 100px);
     text-align: center;
     
-    @media screen and (max-width: 480px) {
-        grid-template-rows: repeat(4, 100px);
+    @media screen and (max-width:653px) and (max-height: 280px) {
+        padding: 16px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 80px);
     }
+    
 `
 
 export const PanelLink = styled(LinkScroll)`
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 3rem;
+    font-size: 2rem;
     text-decoration: none;
     list-style: none;
     transition: 0.2s ease-in-out;
@@ -63,13 +79,22 @@ export const PanelLink = styled(LinkScroll)`
         color: ${({theme}) => theme.main.linkHover};;
         transition: 0.2s ease-in-out;
     }
+    @media screen and (max-width: 320px),(max-width: 375px)  {
+        font-size: 1.5rem;
+    }
+    @media screen and (max-width:653px) and (max-height: 280px) {
+        font-size: 1rem;
+    }
 `
 
 export const PanelButtonWrapper = styled.div`
     display: flex;
     justify-content: center;
     padding-bottom: 2rem;
-    font-size: 3rem;
+    font-size: 1.5rem;
+    @media screen and (max-width: 320px),(max-width: 375px)  {
+        font-size: 1.5rem;
+    }
 `
 
 export const PanelRoute = styled(LinkRouter)`
@@ -88,5 +113,16 @@ export const PanelRoute = styled(LinkRouter)`
     &:hover {
         transition: all 0.2s ease-in-out;
         color: ${({theme}) => theme.main.linkHover};
+    }
+    @media screen and (max-width: 320px),(max-width: 375px)  {
+        font-size: 1.5rem;
+        width: 244px;
+        padding: 8px;
+    }
+
+    @media screen and (max-width:653px) and (max-height: 280px) {
+        font-size: 1rem;
+        width: 200px;
+        padding: 8px;
     }
 `

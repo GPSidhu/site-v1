@@ -23,17 +23,17 @@ const Sidepanel = ({isOpen, toggle}) => {
                     <PanelLink to="projects" onClick={toggle}>Projects</PanelLink>
                     <PanelLink to="contact" onClick={toggle}>Contact</PanelLink>
                     {/* <PanelLink to="resume" onClick={toggle}>Resume</PanelLink> */}
+                    <PanelButtonWrapper>
+                        <PanelRoute to="/resume">
+                            Resume
+                        </PanelRoute>
+                    </PanelButtonWrapper>
+                    <PanelButtonWrapper>
+                        <PanelRoute to="/blog">
+                            Blog
+                        </PanelRoute>
+                    </PanelButtonWrapper>
                 </PanelMenu>
-                <PanelButtonWrapper>
-                    <PanelRoute to="/resume">
-                        Resume
-                    </PanelRoute>
-                </PanelButtonWrapper>
-                <PanelButtonWrapper>
-                    <PanelRoute to="/blog">
-                        Blog
-                    </PanelRoute>
-                </PanelButtonWrapper>
             </PanelWrapper>
         </PanelContainer>
     )

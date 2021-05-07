@@ -10,9 +10,11 @@ export const SectionContainer = styled.section`
     min-height: 560px;
     max-height: 1100px;
     height: 100%;
-    background-image: linear-gradient(to right, ${({theme, seq}) => (seq % 2 === 0) ? theme.main.bgSecondary: theme.main.bgPrimary}, ${({theme, seq}) => (seq % 2 === 0) ? theme.main.bgTertiary : theme.main.bgHeader});
+    background-image: linear-gradient(to right, ${({theme, seq}) => (seq % 2 > 0) ? theme.main.bgSecondary: theme.main.bgPrimary}, ${({theme, seq}) => (seq % 2 > 0) ? theme.main.bgTertiary : theme.main.bgHeader});
+    padding: 4rem 0;
     @media screen and (max-width: 768px) {
         padding: 100px 0;
+        display: inline-table;
     }
 `
 export default SectionContainer

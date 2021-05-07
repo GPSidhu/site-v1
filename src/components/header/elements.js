@@ -18,6 +18,9 @@ export const Nav = styled.nav`
     @media screen and (max-width: 960px) {
         transition: 1s all ease;
     }
+    @media screen and (max-width: 768px) {
+        height: 64px;
+    }
 `
 
 export const HeaderContainer = styled.div`
@@ -44,6 +47,9 @@ export const Logo = styled(LinkRouter)`
     &:hover {
         color: ${({theme}) => theme.main.textPrimary};
     }
+    @media screen and (max-width: 768px) {
+        font-size: 2rem;
+    }
 `
 
 export const MobileIcon = styled.div`
@@ -52,12 +58,17 @@ export const MobileIcon = styled.div`
     @media screen and (max-width: 768px) {
         display: block;
         position: absolute;
-        top: 0;
+        top: -16px;
         right: 0;
         transform: translate(-100%, 60%);
         font-size: 1.8rem;
         cursor: pointer;
         color: ${({theme}) => theme.main.textPrimary};
+    }
+
+    @media screen and (max-width: 360px), (max-width: 480px) {
+        font-size: 1.5rem;
+        top: -8px;
     }
 `
 

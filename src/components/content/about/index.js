@@ -6,29 +6,33 @@ import {
     // SectionTitle,
 } from '../../common'
 
-export const InfoRow = styled.div`
+export const Row = styled.div`
     display: grid;
-    grid-auto-columns: 40% auto; //minmax(auto, 1fr);
     align-items: flex-start;
-    grid-template-areas: ${({imgStart}) => (imgStart ? `'col2
-    col1'` : `'col1 col2'`)};
+    grid-template-areas: 'pic info';
+    grid-template-columns: 2fr 3fr;
 
     @media screen and (max-width: 768px) {
-        grid-template-areas: ${({imgStart}) => (imgStart ? `'col1'
-        'col2'` : `'col1 col1' 'col2 col2'`)}
+        grid-template-areas: 'pic' 'info';
+        grid-template-columns: auto;
+        grid-auto-rows: auto 3fr;
     }
 `
 
-export const Column1 = styled.div`
+export const Avatar = styled.div`
     margin-bottom: 15px;
     padding: 0 15px;
-    grid-area: col1;
+    grid-area: pic;
+    display: flex;
+    justify-content: center;
 `
 
-export const Column2 = styled.div`
+export const Info = styled.div`
     margin-bottom: 15px;
     padding: 0 15px;
-    grid-area: col2;
+    grid-area: info;
+    display: flex;
+    justify-content: center;
 `
 
 export const TextWrapper = styled.div`
@@ -38,7 +42,7 @@ export const TextWrapper = styled.div`
 `
 
 export const TopLine = styled.p`
-    color: aqua; //#fff; //#01bf71;
+    color: ${({theme}) => theme.main.textPrimary};
     font-size: 16px;
     line-height: 16px;
     font-weight: 700;
@@ -52,7 +56,7 @@ export const Heading = styled.h1`
     font-size: 48px;
     line-height: 1.1;
     font-weight 600;
-    color: ${({lightText}) => (lightText ? '#f7f8fa': '#010606')};
+    color: ${({theme}) => theme.main.textSecondary};
 
     @media screen and (max-width: 480px) {
         font-size: 32px;
@@ -64,7 +68,7 @@ export const Subtitle = styled.p`
     margin-bottom: 35px;
     font-size: 18px;
     line-height: 24px;
-    color: ${({darkText}) => (darkText ? '#010606' : '#fff')}
+    color: ${({theme}) => theme.main.textPrimary}
 `
 
 export const BtnWrap = styled.div`
@@ -76,59 +80,52 @@ export const ImgWrap = styled.div`
     max-width: 555px;
     height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     @media screen and (max-width: 780px) {
-        justify-content: flex-start;
+        justify-content: center;
     }
 `
 
 export const Img = styled.img`
     width: 50%;
-    border: 2px solid aqua;
+    border: 2px solid ${({theme}) => theme.main.borderPrimary};
     border-radius: 50%;
     margin: 0 0 10px 0;
     padding-right: 0;
     @media screen and (max-width: 480px) {
-        width: 70%;
+       width: 70%;
     }
 `
 
-function About({ 
-    lightBg,
+function About({
     darkText,
     id,
     lightText,
     topLine,
     headline,
     description,
-    buttonLabel,
     img,
     alt,
-    imgStart,
-    primary,
-    dark,
-    dark2,
     seq
  }) {
     return (
         <>
             <SectionContainer seq={seq} id={id} style={{height: '960px'}}>
                 <SectionWrapper>
-                    {/* <SectionTitle>{topLine}</SectionTitle> */}
-                    <InfoRow imgStart={imgStart}>
-                        <Column1>
+                    <Row>
+                        <Avatar>
                             <ImgWrap>
                                 <Img src={`/images/${img}`} alt={alt}></Img>
                             </ImgWrap>
-                        </Column1>
-                        <Column2>
-                        <TextWrapper>
-                            <TopLine>{topLine}</TopLine>
-                            <Heading lightText={lightText}>{headline}</Heading>
-                            <Subtitle darkText={darkText}>{description}</Subtitle>
-                        </TextWrapper>
-                        </Column2>
-                    </InfoRow>
+                        </Avatar>
+                        <Info>
+                            <TextWrapper>
+                                <TopLine>{topLine}</TopLine>
+                                <Heading lightText={lightText}>{headline}</Heading>
+                                <Subtitle darkText={darkText}>{description}</Subtitle>
+                            </TextWrapper>
+                        </Info>
+                    </Row>
                 </SectionWrapper>
             </SectionContainer>
         </>

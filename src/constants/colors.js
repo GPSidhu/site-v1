@@ -18,16 +18,16 @@ export const Traditional = {
 export const Nature = {
     bgHeader: "#1a4757",
     bgFooter: "#1a4757",
-    bgPrimary: "#95aab1", //"#31708E",
+    bgPrimary: "#a5b8bd", //"#31708E",
     bgSecondary: "#7F99A1", //"#BC986A", //"#DAAD86", //"#FBEEC1", //"#687864", //"#5085A5",
     bgTertiary: "#1a4757",
     textPrimary : "#F7F9FB",
-    textSecondary: "#8FC1E3",
-    borderPrimary: "#F7F9FB",
+    textSecondary: "aqua", //"#8FC1E3",
+    borderPrimary: "aqua", //"#F7F9FB",
     borderSecondary: "#8FC1E3",
     linkHover: "#8FC1E3",
     colorPrimary: "#F7F9FB",
-    colorSecondary: "#8FC1E3",
+    colorSecondary: "aqua", //"#8FC1E3",
     colorDark: "#31708E",
     colorLight: "#8FC1E3"
 }

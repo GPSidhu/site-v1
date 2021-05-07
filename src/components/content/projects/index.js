@@ -26,9 +26,10 @@ const ProjectCardWrapper = styled.div`
 const CardContainer = styled.div`
     height: 250px;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    display: grid;
+    grid-template-areas: "info snap";
+    grid-template-columns: 40% auto;
+    grid-auto-rows: 100%;
     margin: 1rem;
     border-radius: 5px;
     padding: 2px;
@@ -36,17 +37,15 @@ const CardContainer = styled.div`
     background: linear-gradient(to left, ${({theme}) => theme.main.bgSecondary},
     ${({theme}) => theme.main.bgTertiary});
 
-    .left {
+    .info {
+        grid-area: info;
         display: grid;
         grid-template-rows: 2fr 1fr;
-        width: 40%;
-        height: 100%;
-        padding-right: 1rem;
     }
-    .right {
+    .snap {
+        grid-area: snap;
         position: absolute;
-        width: 60%;
-        right: 0;
+        width: 100%;
         padding-left: 1rem;
         border-left: 1px solid ${({theme}) => theme.main.colorSecondary};
 
@@ -60,6 +59,19 @@ const CardContainer = styled.div`
             background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.3) 100%),
             linear-gradient(180deg, rgba(0,0,0,0.2) 0%, transparent 100%);
             z-index: 2;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        height: 500px;
+        grid-template-areas: "snap" "info" ;
+        grid-template-columns: auto;
+        grid-auto-rows: auto 150px;
+
+        .snap {
+            padding-left: 0;
+            padding-top: 1rem;
+            border-left: none;
         }
     }
 `
@@ -77,7 +89,7 @@ const IconsWrapper = styled.div`
 `
 
 const IconLink = styled.a`
-    color: ${({theme}) => theme.main.textPrimary};
+    color: ${({theme}) => theme.main.colorSecondary};
     font-size: 24px;
     &:hover {
         color: ${({theme}) => theme.main.linkHover};
@@ -108,8 +120,8 @@ function Projects ({title, projects, seq}) {
                     {
                         projects && projects.map((project, index) => (
                             <CardContainer key={`project_${index}`}>
-                                <div className="left">
-                                    <Card className="card"
+                                <div className="info">
+                                    <Card 
                                         header={<h3>{project.title}</h3>}
                                         footer={renderCardFooter(project)}
                                         style={
@@ -120,7 +132,7 @@ function Projects ({title, projects, seq}) {
                                         }
                                     >{project.description}</Card>
                                 </div>
-                                <div className="right">
+                                <div className="snap">
                                     <Carousel>
                                         {project.snapshots && 
                                             project.snapshots.map((s, i) => <ProjectCover key={i} src={`/images/projects${s}`} alt='Project Snapshot' />)
