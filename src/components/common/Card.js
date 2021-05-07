@@ -13,6 +13,9 @@ const CardWrapper = styled.div`
     padding: 1rem;
     max-height: 380px;
     z-index: 2;
+    @media screen and (max-width: 375px) {
+        display: inline-table;
+    }
 `
 const CardHeader = styled.div`
     margin-bottom: 8px;

@@ -7,6 +7,11 @@ export const SectionTitle = styled.h3`
     align-items: center;
     margin-top: 64px;
     height: 224px;
+
+    @media screen and (max-width: 480px) {
+        margin-top: 0;
+        height: 100px;
+    }
 `
 
 export default SectionTitle

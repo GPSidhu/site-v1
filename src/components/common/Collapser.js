@@ -32,7 +32,7 @@ class Collapser extends Component {
     constructor(props) {
       super(props);
       this.state = {
-        expanded: false
+        expanded: props.expanded || false
       }
     }
     
