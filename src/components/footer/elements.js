@@ -61,40 +61,11 @@ export const FooterLink = styled(Link)`
     }
 `
 
-export const SocialMedia = styled.section`
-    max-width: 1000px;
-    width: 100%;
-`
-
-export const SocialMediaWrapper = styled.div`
+export const WebsiteRights = styled.div`
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    max-width: 1100px;
-    margin: 40px auto 0 auto;
-
-    @media screen and (max-width: 820px) {
-        flex-direction: column;
-    }    
-`
-
-export const WebsiteRights = styled.small`
-    color: #fff;
-    margin-botto: 16px;
-    font-style: italic;
-`
-
-export const SocialIcons = styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 240px;
-`
-
-export const SocialIconLink = styled.a`
     color: ${({theme}) => theme.main.textPrimary};
-    font-size: 24px;
-    &:hover {
-        color: ${({theme}) => theme.main.linkHover};
-    }
+    margin-bottom: 16px;
+    font-style: italic;
 `

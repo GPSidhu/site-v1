@@ -1,9 +1,10 @@
 import styled from 'styled-components'
 
 export const SectionWrapper = styled.div`
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     z-index: 1;
-    width: 100%;
     max-width: 1100px;
     padding-bottom: 64px;
 `

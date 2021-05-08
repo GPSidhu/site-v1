@@ -111,9 +111,9 @@ const renderCardFooter = (project) => (
     </IconsWrapper>
   )
 
-function Projects ({title, projects, seq}) {
+function Projects ({title, projects, id, seq}) {
     return (
-        <SectionContainer id={'projects'} seq={seq}>
+        <SectionContainer id={id} seq={seq}>
             <SectionWrapper>
                 <SectionTitle>{title}</SectionTitle>
                 <ProjectCardWrapper>
