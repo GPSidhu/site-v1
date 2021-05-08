@@ -76,7 +76,7 @@ export const PanelLink = styled(LinkScroll)`
     padding-bottom: 2rem;
     margin-left: -28px;
     &:hover {
-        color: ${({theme}) => theme.main.linkHover};;
+        color: ${({theme}) => theme.main.linkHover};
         transition: 0.2s ease-in-out;
     }
     @media screen and (max-width: 320px),(max-width: 375px)  {
@@ -101,11 +101,11 @@ export const PanelRoute = styled(LinkRouter)`
     border-radius: 24px;
     width: 300px;
     background: 'transparent';
-    border: 1px solid ${({theme}) => theme.main.textPrimary};
+    border: 1px dotted ${({theme}) => theme.main.colorSecondary};
     white-space: nowrap;
     padding: 16px;
     text-align: center;
-    color: ${({theme}) => theme.main.colorSecondary};
+    color: ${({theme}) => theme.main.textPrimary};
     cursor: pointer;
     transition: all 0.2s ease-in-out;
     text-decoration: none;

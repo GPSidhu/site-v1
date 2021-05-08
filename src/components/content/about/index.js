@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import {
     SectionContainer,
     SectionWrapper,
-    // SectionTitle,
 } from '../../common'
 
 export const Row = styled.div`
@@ -98,9 +97,7 @@ export const Img = styled.img`
 `
 
 function About({
-    darkText,
     id,
-    lightText,
     topLine,
     headline,
     description,
@@ -121,8 +118,8 @@ function About({
                         <Info>
                             <TextWrapper>
                                 <TopLine>{topLine}</TopLine>
-                                <Heading lightText={lightText}>{headline}</Heading>
-                                <Subtitle darkText={darkText}>{description}</Subtitle>
+                                <Heading>{headline}</Heading>
+                                <Subtitle>{description}</Subtitle>
                             </TextWrapper>
                         </Info>
                     </Row>

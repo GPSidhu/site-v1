@@ -28,14 +28,16 @@ import {
     AboutData,
     ExperienceData,
     ProjectsData,
-    FooterData
+    FooterData,
+    ContactData
 } from '../data'
 
 const data = {
     cover: CoverData,
     experience: ExperienceData,
     about: AboutData,
-    projects: ProjectsData
+    projects: ProjectsData,
+    contact: ContactData
 }
 
 const Home = () => {

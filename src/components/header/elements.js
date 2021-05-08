@@ -120,7 +120,7 @@ export const MenuButtonLink = styled(LinkRouter)`
     padding: 10px 22px;
     color: ${({theme}) => theme.main.textPrimary};
     font-size: 16px;
-    border: 1px dotted ${({theme}) => theme.main.colorLight};
+    border: 1px dotted ${({theme}) => theme.main.colorSecondary};
     outline: none;
     cursor: pointer;
     transition: all 0.2s ease-in-out;
@@ -128,5 +128,6 @@ export const MenuButtonLink = styled(LinkRouter)`
 
     &:hover {
         color: ${({theme}) => theme.main.linkHover};
+        border: 1px dotted ${({theme}) => theme.main.linkHover};
     }
 `
