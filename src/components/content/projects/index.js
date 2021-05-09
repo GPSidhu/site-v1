@@ -49,17 +49,17 @@ const CardContainer = styled.div`
         padding-left: 1rem;
         border-left: 1px solid ${({theme}) => theme.main.colorSecondary};
 
-        :before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.3) 100%),
-            linear-gradient(180deg, rgba(0,0,0,0.2) 0%, transparent 100%);
-            z-index: 2;
-        }
+        // :before {
+        //     content: '';
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+        //     right: 0;
+        //     bottom: 0;
+        //     background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.3) 100%),
+        //     linear-gradient(180deg, rgba(0,0,0,0.2) 0%, transparent 100%);
+        //     z-index: 2;
+        // }
     }
 
     @media screen and (max-width: 480px) {
@@ -139,7 +139,6 @@ function Projects ({title, projects, id, seq}) {
                                         }
                                     </Carousel >
                                 </div>
-                                <hr/>
                             </CardContainer>
                         ))
                     }

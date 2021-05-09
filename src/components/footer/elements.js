@@ -3,6 +3,15 @@ import { Link } from 'react-router-dom'
 
 export const FooterContainer = styled.footer`
     background: ${({theme}) => theme.main.bgFooter};
+
+    a {
+        padding-left: 4px;
+        text-decoration: none;
+        color: ${({theme}) => theme.main.colorSecondary};
+        &:hover {
+            color: ${({theme}) => theme.main.linkHover};
+        }
+    }
 `
 
 export const FooterWrapper = styled.div`

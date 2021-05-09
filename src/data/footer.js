@@ -11,7 +11,8 @@ const data = {
         {id: 'facebook', label: 'Facebook', href: '/'},
         {id: 'instagram', label: 'Instagram', href: '/'},
         {id: 'github', label: 'Github', href: '//www.github.com/GPSidhu'},
-    ]
+    ],
+    source: 'https://github.com/GPSidhu/site-v1'
 }
 
 export default data

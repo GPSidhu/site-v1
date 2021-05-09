@@ -1,12 +1,12 @@
 // Vars
 $black: #010000;
 $white: #ffffff;
-$lightGray: #e6e6e6;
-$darkGray: #333;
-$red: #ff1755;
-$base1: #2e4157;
-$base2: #152538;
-$background: $base1;
+// $lightGray: #e6e6e6;
+// $darkGray: #333;
+// $red: #ff1755;
+// $base1: #2e4157;
+// $base2: #152538;
+// $background: $base1;
 
 // mixins
 @mixin translateY($e) {
@@ -21,6 +21,8 @@ $background: $base1;
 }
 
 body {
+    margin: 0px;
+    display: block;
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
     color: $black;
