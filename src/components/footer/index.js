@@ -9,7 +9,7 @@ import {
     WebsiteRights
 } from './elements'
 
-const Footer = ({links, contacts, rights}) => {
+const Footer = ({links, rights, source}) => {
     return (
         <FooterContainer>
             <FooterWrapper>
@@ -22,6 +22,7 @@ const Footer = ({links, contacts, rights}) => {
                 </FooterLinksContainer>
                 <WebsiteRights>
                         <small>{`© ${new Date().getFullYear()} ${rights}`}</small>
+                        <a target="_blank" rel="noreferrer noopener" href={source}>Source</a>
                 </WebsiteRights>
             </FooterWrapper>
         </FooterContainer>

@@ -1,8 +1,7 @@
 import styled from 'styled-components'
 import * as FONTS from '../../../constants/fonts'
 import {
-    MdArrowForward,
-    MdKeyboardArrowRight
+    MdArrowDownward
 } from 'react-icons/md'
 
 export const CoverContainer = styled.div`
@@ -11,7 +10,7 @@ export const CoverContainer = styled.div`
     justify-content: center;
     align-items: center;
     padding: 0 30px;
-    height: 100vh; //800px;
+    height: 100vh;
     position: relative;
       
     :before {
@@ -37,7 +36,6 @@ export const CoverBg = styled.div`
     width: 100%;
     height: 100%;
     overflow: hidden;
-    //background: #2e4157; 
 
     background-attachment: fixed;
     background-position: center;
@@ -51,11 +49,9 @@ export const CoverBg = styled.div`
 export const ImageBg = styled.img`
     width: 100%;
     height: 100%;
-    //position: fixed;
     background-image: url('/images/contentBg.jpeg');
-    // -o-object-fit: cover;
-    // object-fit: cover;
-    //background: #232a34;
+    background-repeat:no-repeat;
+    background-size:cover;
     pointer-events: none;
 `
 
@@ -69,31 +65,32 @@ export const Content = styled.div`
     align-items: start;
 `
 
-export const ContentH1 = styled.h1`
-    color: #fff;
-    font-size: 48px;
-    text-align: center;
+export const Quote = styled.p`
+    font-family: 'Pinyon Script', cursive;
+    color: ${({theme}) => theme.main.textPrimary};
+    font-size: ${props => FONTS.TEXT[props.size] || FONTS.TEXT.sm};
+    max-width: 500px;
 
     @media screen and (max-width: 768px) {
-        font-size: 40px
-    }
-    @media screen and (max-width: 480px) {
         font-size: 32px
     }
+    @media screen and (max-width: 480px) {
+        font-size: 24px
+    }
 `
-
-export const ContentP = styled.p`
-    // margin-top: 24px;
-    color: #fff;
+export const Author = styled.div`
+    color: ${({theme}) => theme.main.textPrimary};
     font-size: ${props => FONTS.TEXT[props.size] || FONTS.TEXT.sm};
-    //text-align: center;
-    max-width: 600px;
-
+    width: 100%;
+    font-style: italic;
+    span {
+        float: right;
+    }
     @media screen and (max-width: 768px) {
         font-size: 24px
     }
     @media screen and (max-width: 480px) {
-        font-size: 18px
+        font-size: 16px
     }
 `
 
@@ -104,12 +101,7 @@ export const BtnWrapper = styled.div`
     align-items: center;
 `
 
-export const ArrowForward = styled(MdArrowForward)`
-    margin-left: 8px;
-    font-size: 20px;
-`
-
-export const ArrowRight = styled(MdKeyboardArrowRight)`
+export const ArrowDownward = styled(MdArrowDownward)`
     margin-left: 8px;
     font-size: 20px;
 `

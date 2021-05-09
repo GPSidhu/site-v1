@@ -6,13 +6,14 @@ import {
     CoverBg,
     ImageBg,
     Content,
-    // ContentH1,
-    ContentP,
-    BtnWrapper
+    Quote,
+    Author,
+    BtnWrapper,
+    ArrowDownward
 } from './elements'
 import Button from '../../common/Button';
 
-const Cover = ({backgroundColor, backgroundImage, lines, showLink}) => {
+const Cover = ({backgroundColor, backgroundImage, quotes}) => {
     // const [scrollTop, setScrollTop] = useState(false)
 
     // const updateCoverBg = () => {
@@ -26,24 +27,23 @@ const Cover = ({backgroundColor, backgroundImage, lines, showLink}) => {
 
     return (
         <div>
-            <CoverContainer coverBg={backgroundColor}>
-                 {/* top={scrollTop}> */}
+            <CoverContainer>
                 <CoverBg>
                     {backgroundImage && <ImageBg></ImageBg>}
                 </CoverBg>
                 <Content>
-                    {lines && lines.map((line, i) => (
-                        <ContentP key={`cp_${i}`} size={line.size}>{line.text}</ContentP>
+                    {quotes && quotes.map((q, i) => (
+                        <div key={`q_${i}`} >
+                            <Quote size={q.size}>{q.text}</Quote>
+                            <Author size={q.size}><span>{`- ${q.author}`}</span></Author>
+                        </div>
                     ))}
-                    {/* <ContentH1>About</ContentH1> */}
-                    {showLink && 
-                    <BtnWrapper>
-                        <Button >
-                           Explore 
-                        </Button>
-                    </BtnWrapper>
-                    }
                 </Content>
+                {/* <BtnWrapper>
+                    <Button >
+                        <ArrowDownward />
+                    </Button>
+                </BtnWrapper> */}
             </CoverContainer>
         </div>
     )
