@@ -11,6 +11,9 @@
     "react-dom": "^17.0.1",
     "react-multi-carousel": "^2.6.2",
     "react-scripts": "4.0.3",
+    "react-icons": "^4.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scroll": "^1.8.2",
     "styled-components": "^5.2.1",
     "web-vitals": "^1.1.0"
   },
@@ -44,9 +47,6 @@
     "gulp-clean-css": "^4.3.0",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^4.1.0",
-    "gulp-uglify": "^3.0.2",
-    "react-icons": "^4.2.0",
-    "react-router-dom": "^5.2.0",
-    "react-scroll": "^1.8.2"
+    "gulp-uglify": "^3.0.2"
   }
 }
