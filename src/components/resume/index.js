@@ -172,7 +172,7 @@ export function Resume({title, subTitle, description, avatar, contacts, skills, 
                             {renderSkills(skills)}
                         </ModuleContainer>
                         <ModuleContainer>
-                            <ModuleTitle>Projects</ModuleTitle>
+                            <ModuleTitle>Personal Projects</ModuleTitle>
                             {renderProjects(projects)}
                         </ModuleContainer>
                         <ModuleContainer>

@@ -116,6 +116,7 @@ export const RightColumn = styled.div`
     //border: 1px dotted grey;
     display: flex;
     flex-direction: column;
+    max-width: 212px;
 `
 
 export const ModuleContainer = styled.div`
@@ -144,6 +145,7 @@ export const ModuleContent = styled.ul`
     display: block;
     height: auto;
     width: 100%;
+    overflow-wrap: break-word;
 `
 
 export const ModuleContentLine = styled.li`

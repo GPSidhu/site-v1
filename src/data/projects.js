@@ -16,15 +16,13 @@ const data = {
             snapshots: [
                 '/flappy-bird/flappy_bird_1.png',
                 '/flappy-bird/flappy_bird_2.png',
-                '/flappy-bird/flappy_bird_3.png',
-                '/flappy-bird/flappy_bird_4.png',
-                '/flappy-bird/flappy_bird_5.png',
+                '/flappy-bird/flappy_bird_3.png'
             ],
-            cover: '/flappy-bird/flappy_bird_5.png'
+            cover: '/flappy-bird/flappy_bird_1.png'
         },
         {
-            title: 'A Chess game',
-            description: 'An online multiplayer chess game which can be played with voice commands',
+            title: 'ChessProf',
+            description: 'An effort to get better at chess and help others with the same by providing free to learn chess openings, end game tactics and more',
             technologies: [
                 'reactjs', 'javascript', 'html', 'css', 'tensorflowjs'
             ],
@@ -34,8 +32,10 @@ const data = {
                 code: 'https://github.com/GPSidhu/chess'
             },
             snapshots: [
-                '/chess/chess_1.png',
-                '/flappy-bird/flappy_bird_2.png',
+                '/chess/chessprof_1.png',
+                '/chess/chessprof_2.png',
+                '/chess/chessprof_3.png',
+                '/chess/chessprof_4.png',
             ],
             cover: '/chess/chess_1.png'
         },
@@ -52,8 +52,6 @@ const data = {
             },
             snapshots: [
                 '/site/site_1.png',
-                '/site/site_2.png',
-                '/site/site_3.png',
             ],
             cover: '/site/site_1.png'
         }
