@@ -4,21 +4,35 @@ const data = {
 	jobs: [
 		{
 			designation: "Senior Software Engineer",
-			company: "Servicenow",
+			company: {
+				name: "Servicenow",
+                url: "https://www.servicenow.com/",
+                about: "ServiceNow is a USA based platform-as-a-service provider, which help companies automate their IT operations and manage digital workflows. Apart from help desk, Servicenow offers a variety of enterprise productivity tools like IT Asset management, IT Operations management etc.",
+                logo: "servicenow.png"
+			},
 			from: "July 2018",
 			to: "December 2020",
 			location: "Hyderabad",
 			tasks: [
-				"On-call scheduling: was primarily part of on-call management team under Incident Management",
-				"Incident management: developed varies features such as On-Call Live Tracking(UI)",
-				`<a href='https://docs.servicenow.com/bundle/paris-it-service-management/page/administer/on-call-scheduling/task/track-escalation-progress-oncall.html'>Doc</a>`,
-				//  Incident-Alert management integration, starting from Servicenow Madrid to Paris releases',
-				"Seismic Calendar: Worked on the development of a fully functional calendar component using in house developed react-like framework called seismic",
-				"Worked on spiking and implementing integrations of Servicenow ITSM module with Slack, MS Teams",
-				"Project Air - Automated Incident Response: spiked, designed and developed several UI components",
-				//. Involved in re-using and implementing on-call for AIR',
-				//'Worked on different front-end technologies like seismic, js, sass, angularjs, jelly'
+				"Worked in the On-Call schedule management under core ITSM dev team starting from Madrid till Quebec release of Servicenow.",
+				"New York: Enhanced On-Call ui to support custom escalations and worked to integrate Major incident with alert management modules.",
+				"Orlando: Worked in a team to develop fully functional calendar component in seismic. Spiked to support MS Teams as a channel for On-call escalations.",
+				"Paris: Developed On-Call Live Escalation Tracking(UI). Worked on integrations to get the ability to create incidents in Servicenow via slash commands from Slack.",
+				"Quebec: Worked in Project AIR (Automated Incident Response) a lightweight easy to buy/use version of Servicenow for SREs. Apart from leading the effort to modify and redesign on-call features wherever applicable to uptake in AIR, was also responsible for story planning, pointing, code reviews and knowledge transfers regarding On-call management.",
 			],
+			taskRefs: {
+				// add a ref link to end of above task
+				2: {
+					label: "View",
+					link:
+						"https://developer.servicenow.com/dev.do#!/reference/now-experience/quebec/now-components/now-calendar/overview",
+				},
+				3: {
+					label: "View",
+					link:
+						"https://docs.servicenow.com/bundle/paris-it-service-management/page/administer/on-call-scheduling/task/track-escalation-progress-oncall.html",
+				},
+			},
 			achievements: [
 				{
 					title: "Quarterly Awards 2020 Q3",
@@ -29,7 +43,12 @@ const data = {
 		},
 		{
 			designation: "IT Senior Consultant",
-			company: "Oracle",
+			company: {
+				name: "Oracle",
+                url: "https://www.oracle.com/in/index.html",
+                about: "Oracle is an American billion dollar multinational which develops products ranging from relational databases to enterprise solutions for ERP, finance, human capital management, supply chain management etc.",
+                logo: "oracle.png"
+			},
 			from: "April 2015",
 			to: "July 2018",
 			location: "Hyderabad",
@@ -44,7 +63,12 @@ const data = {
 		},
 		{
 			designation: "Software Developer",
-			company: "Reliance Jio Infocomm",
+			company: {
+				name: "Reliance Jio Infocomm",
+				url: "https://www.coai.com/content/reliance-jio-infocomm-limited",
+                about: "Reliance Jio Infocomm Limited (RJIL), a subsidiary of Reliance Industries Limited (RIL), India’s largest private sector company, is the first telecom operator to hold pan India Unified License.",
+                logo: "rjil.png"
+			},
 			from: "June 2013",
 			to: "April 2015",
 			location: "Mumbai",

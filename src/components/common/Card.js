@@ -11,7 +11,7 @@ const CardWrapper = styled.div`
     border-radius: 6px;
     border: 1px dotted ${({theme}) => theme.main.borderPrimary};
     padding: 1rem;
-    max-height: 380px;
+    overflow: auto;
     z-index: 2;
     @media screen and (max-width: 375px) {
         display: inline-table;
