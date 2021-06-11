@@ -52,19 +52,19 @@ export const Heading = styled.h1`
     font-size: 48px;
     line-height: 1.1;
     font-weight 600;
-    color: ${({ theme }) => theme.main.textSecondary};
+    color: ${({ theme }) => theme.main.colorSecondary};
 
     @media screen and (max-width: 480px) {
         font-size: 32px;
     }
 `;
 
-export const Subtitle = styled.p`
+export const Paragraph = styled.p`
 	max-width: 440px;
 	margin-bottom: 35px;
 	font-size: 18px;
 	line-height: 24px;
-	color: ${({ theme }) => theme.main.textPrimary};
+	color: ${({ theme }) => theme.main.textSecondary};
 `;
 
 export const BtnWrap = styled.div`
@@ -110,7 +110,11 @@ function About({ id, topLine, headline, description, img, alt, seq }) {
 							<TextWrapper>
 								<TopLine>{topLine}</TopLine>
 								<Heading>{headline}</Heading>
-								<Subtitle>{description}</Subtitle>
+                                {
+                                    description && 
+                                    description.map((p, idx) => <Paragraph key={`p_${idx}`}>{p}</Paragraph>)
+                                }
+								
 							</TextWrapper>
 						</Info>
 					</Row>

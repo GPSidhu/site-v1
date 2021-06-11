@@ -40,7 +40,15 @@ const CardContainer = styled.div`
     .info {
         grid-area: info;
         display: grid;
-        grid-template-rows: 2fr 1fr;
+        grid-template-rows: auto 1fr 1fr;
+
+        .description {
+            color: ${({theme}) => theme.main.textSecondary};
+        }
+        .tech {
+            margin-top: 12px;
+            color: ${({theme}) => theme.main.colorSecondary};
+        }
     }
     .snap {
         grid-area: snap;
@@ -48,26 +56,14 @@ const CardContainer = styled.div`
         width: 100%;
         padding-left: 1rem;
         border-left: 1px solid ${({theme}) => theme.main.colorSecondary};
-
-        // :before {
-        //     content: '';
-        //     position: absolute;
-        //     top: 0;
-        //     left: 0;
-        //     right: 0;
-        //     bottom: 0;
-        //     background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.3) 100%),
-        //     linear-gradient(180deg, rgba(0,0,0,0.2) 0%, transparent 100%);
-        //     z-index: 2;
-        // }
     }
 
     @media screen and (max-width: 480px) {
         height: 500px;
         grid-template-areas: "snap" "info" ;
         grid-template-columns: auto;
-        grid-auto-rows: auto 150px;
-
+        grid-auto-rows: 1fr 1fr;
+        grid-gap: 12px;
         .snap {
             padding-left: 0;
             padding-top: 1rem;
@@ -100,7 +96,7 @@ const renderCardFooter = (project) => (
     <IconsWrapper>
             <Tooltip message={"Code"} position={'top'}>
                 <IconLink href={project.links.code} target="_blank" aria-label={'Code'}>
-                    {SOCIAL_ICON_COMP_MAP['github']}
+                    {SOCIAL_ICON_COMP_MAP['github'].icon}
                 </IconLink>
             </Tooltip>
             <Tooltip message={"Demo"} position={'top'}>
@@ -116,10 +112,10 @@ function Projects ({title, projects, id, seq}) {
         <SectionContainer id={id} seq={seq}>
             <SectionWrapper>
                 <SectionTitle>{title}</SectionTitle>
-                <ProjectCardWrapper>
+                <ProjectCardWrapper className="project-wrapper">
                     {
                         projects && projects.map((project, index) => (
-                            <CardContainer key={`project_${index}`}>
+                            <CardContainer className="project" key={`project_${index}`}>
                                 <div className="info">
                                     <Card 
                                         header={<h3>{project.title}</h3>}
@@ -130,7 +126,10 @@ function Projects ({title, projects, id, seq}) {
                                                 border: 'none'
                                             }
                                         }
-                                    >{project.description}</Card>
+                                    >
+                                        <div className="description">{project.description}</div>
+                                        {project.technologies && <div className="tech">{project.technologies.join(" • ")}</div>}
+                                    </Card>
                                 </div>
                                 <div className="snap">
                                     <Carousel>

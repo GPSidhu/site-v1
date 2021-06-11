@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Jobcard from './jobcard'
+
 const TimelineContainer = styled.div`
     height: 100%;
     width: 100%;
@@ -11,9 +12,9 @@ const TimelineContainer = styled.div`
     }
 `
 const CenterLine = styled.div`
-    border: 2px solid ${({theme}) => theme.main.bgTertiary};
+    border: 2px solid ${({theme}) => theme.main.colorSecondary};
     border-radius: 4px;
-    height: 75%;
+    height: 100%;
     min-height: 600px;
     width: 2px;
     position: absolute;
@@ -29,7 +30,6 @@ const CenterLine = styled.div`
 `
 const TimelineSectionWrapper = styled.div`
     width: 100%;
-    height: 200px;
     display: grid;
     grid-template-areas: ${({index}) => index % 2 === 0 ? `"dur circle card"` : `"card circle dur"`};
     grid-template-columns: 1fr 24px 1fr;
@@ -71,7 +71,7 @@ const GridItemContainer = styled.div`
 `
 
 const Circle = styled.div`
-    background: ${({theme}) => theme.main.bgTertiary};
+    background: ${({theme}) => theme.main.colorSecondary};
     border-radius: 50%;
     height: 24px;
     width: 24px;

@@ -112,6 +112,25 @@ export const MenuButton = styled.nav`
         display: none;
     }
 `
+export const MenuButtonAnchor = styled.a`
+    border-radius: 8px;
+    background: 'transparent';
+    white-space: nowrap;
+    padding: 10px 22px;
+    color: ${({theme}) => theme.main.textPrimary};
+    font-size: 16px;
+    border: 1px dotted ${({theme}) => theme.main.colorSecondary};
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+
+    &:hover {
+        cursor: ne-resize;
+        color: ${({theme}) => theme.main.linkHover};
+        border: 1px dotted ${({theme}) => theme.main.linkHover};
+    }
+`
 
 export const MenuButtonLink = styled(LinkRouter)`
     border-radius: 8px;
@@ -127,6 +146,7 @@ export const MenuButtonLink = styled(LinkRouter)`
     text-decoration: none;
 
     &:hover {
+        cursor: ne-resize;
         color: ${({theme}) => theme.main.linkHover};
         border: 1px dotted ${({theme}) => theme.main.linkHover};
     }

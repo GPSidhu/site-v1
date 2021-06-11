@@ -19,9 +19,11 @@ const Cover = ({ backgroundImage, quotes }) => {
 						quotes.map((q, i) => (
 							<div key={`q_${i}`}>
 								<Quote size={q.size}>{q.text}</Quote>
-								<Author size={q.size}>
-									<span>{`- ${q.author}`}</span>
-								</Author>
+								{q.author && (
+									<Author size={q.size}>
+										<span>{`- ${q.author}`}</span>
+									</Author>
+								)}
 							</div>
 						))}
 				</Content>

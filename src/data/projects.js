@@ -3,10 +3,32 @@ const data = {
     title: 'Projects',
     projects: [
         {
-            title: 'Flappy Bird voice control',
-            description: 'A browser game which can be played with voice commands',
+            title: 'ChessProf',
+            description: 
+            'A web app built in react and typescript with an idea to help people get better at chess by providing free ' + 
+            'content and an interactive ui for learning chess openings, end game tactics etc. It is work in progress currently.',
             technologies: [
-                'javascript', 'html', 'css', 'tensorflowjs', 'p5js'
+                'ReactJs', 'Typescript', 'Redux'
+            ],
+            links: {
+                demo: 'http://chessprof.netlify.app/',
+                video: '',
+                code: 'https://github.com/GPSidhu/chessprof-dsktp'
+            },
+            snapshots: [
+                '/chess/chessprof_1.png',
+                '/chess/chessprof_2.png',
+                '/chess/chessprof_3.png',
+                '/chess/chessprof_4.png',
+            ],
+            cover: '/chess/chess_1.png'
+        },
+        {
+            title: 'Flappy Bird voice control',
+            description: 'A browser game created just for fun built in p5.js and tensorflowjs ' + 
+            'that allows you to control the bird using voice commands.',
+            technologies: [
+                'p5js', 'tensorflowjs'
             ],
             links: {
                 demo: 'http://localhost:5000',
@@ -21,29 +43,28 @@ const data = {
             cover: '/flappy-bird/flappy_bird_1.png'
         },
         {
-            title: 'ChessProf',
-            description: 'An effort to get better at chess and help others with the same by providing free to learn chess openings, end game tactics and more',
+            title: 'IPL Fantasy Team Maker',
+            description: 'For cricket lovers, create your optimum dream11 team without any hussle , ' + 
+            'the algo will take care of selecting maximum highest rated players but adhering to the constraints',
             technologies: [
-                'reactjs', 'javascript', 'html', 'css', 'tensorflowjs'
+                'ReactJs', 'Bootstrap'
             ],
             links: {
-                demo: 'http://localhost:5000',
+                demo: 'http://localhost:3000',
                 video: '',
-                code: 'https://github.com/GPSidhu/chess'
+                code: 'https://github.com/GPSidhu/ipl_team_maker_v1'
             },
             snapshots: [
-                '/chess/chessprof_1.png',
-                '/chess/chessprof_2.png',
-                '/chess/chessprof_3.png',
-                '/chess/chessprof_4.png',
+                '/ipl_team_maker/ipl_team_maker_1.png',
+                '/ipl_team_maker/ipl_team_maker_2.png',
             ],
-            cover: '/chess/chess_1.png'
+            cover: '/site/site_1.png'
         },
         {
             title: 'Personal Site',
-            description: 'The first version of my personal site',
+            description: 'My first attempt at building a personal site from scratch. Blog will be coming soon...',
             technologies: [
-                'reactjs', 'html', 'sass'
+                'Reactjs'
             ],
             links: {
                 demo: 'http://localhost:3000',
