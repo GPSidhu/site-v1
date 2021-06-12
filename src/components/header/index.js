@@ -14,7 +14,7 @@ import {
 	MobileIcon,
 	MenuButton,
 	MenuButtonLink,
-    MenuButtonAnchor,
+	MenuButtonAnchor,
 } from "./elements";
 
 const menuItems = [
@@ -29,16 +29,18 @@ const menuItems = [
 const Header = ({ toggle }) => {
 	const [scrollNav, setScrollnav] = useState(false);
 	const changeNav = () => {
-		if (window.scrollY >= 80) setScrollnav(true);
-		else setScrollnav(false);
+		setScrollnav(window.scrollY >= 80);
 	};
+
 	useEffect(() => {
 		window.addEventListener("scroll", changeNav);
+		//eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
 	const toggleHome = () => {
 		scroll.scrollToTop();
-	};
+    };
+
 	return (
 		<>
 			<IconContext.Provider value={{ color: "#fff" }}>
@@ -72,14 +74,14 @@ const Header = ({ toggle }) => {
 								if (item.type === "pdf")
 									return (
 										<MenuButton key={`menu_item_${index}`}>
-												<MenuButtonAnchor
-													className="resume-button"
-													href={item.src}
-													target="_blank"
-													rel="noopener noreferrer"
-												>
-													{item.label}
-												</MenuButtonAnchor>
+											<MenuButtonAnchor
+												className="btn-anchor"
+												href={item.src}
+												target="_blank"
+												rel="noopener noreferrer"
+											>
+												{item.label}
+											</MenuButtonAnchor>
 										</MenuButton>
 									);
 								return [];

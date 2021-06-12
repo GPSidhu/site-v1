@@ -24,14 +24,14 @@ const data = {
             cover: '/chess/chess_1.png'
         },
         {
-            title: 'Flappy Bird voice control',
+            title: 'A Bird Game',
             description: 'A browser game created just for fun built in p5.js and tensorflowjs ' + 
             'that allows you to control the bird using voice commands.',
             technologies: [
                 'p5js', 'tensorflowjs'
             ],
             links: {
-                demo: 'http://localhost:5000',
+                // demo: 'http://localhost:5000',
                 video: '',
                 code: 'https://github.com/GPSidhu/flappy-bird-voice-control'
             },
@@ -50,7 +50,7 @@ const data = {
                 'ReactJs', 'Bootstrap'
             ],
             links: {
-                demo: 'http://localhost:3000',
+                // demo: 'http://localhost:3000',
                 video: '',
                 code: 'https://github.com/GPSidhu/ipl_team_maker_v1'
             },
@@ -67,7 +67,7 @@ const data = {
                 'Reactjs'
             ],
             links: {
-                demo: 'http://localhost:3000',
+                demo: 'https://guri-sidhu.netlify.app',
                 video: '',
                 code: 'https://github.com/GPSidhu/site-v1'
             },

@@ -7,7 +7,7 @@ const data = {
     email: 'ss.guri1991@gmail.com',
     contacts: [
         {id: 'linkedin', label: 'Linkedin', href: '//www.linkedin.com/in/gurpreet-singh-75266446/'},
-        {id: 'facebook', label: 'Facebook', href: '/'},
+        {id: 'facebook', label: 'Facebook', href: 'https://www.facebook.com/gsinghsidhu/'},
         // {id: 'instagram', label: 'Instagram', href: '/'},
         {id: 'github', label: 'Github', href: '//www.github.com/GPSidhu'},
     ]
