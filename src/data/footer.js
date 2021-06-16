@@ -10,7 +10,7 @@ const data = {
 		{
 			id: "linkedin",
 			label: "Linkedin",
-			href: "https://www.linkedin.com/in/gurpreet-singh-75266446/",
+			href: "https://www.linkedin.com/in/g-singh-sidhu",
 		},
 		{
 			id: "facebook",

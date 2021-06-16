@@ -20,7 +20,7 @@ const data = {
 		},
 		{
 			type: "linkedin",
-			value: "linkedin.com/in/gurpreet-singh-75266446/",
+			value: "linkedin.com/in/g-singh-sidhu/",
 		},
 		{
 			type: "github",
