@@ -8,8 +8,6 @@ import Blog from './pages/blog'
 import Resume from './pages/resume'
 import { ThemeProvider } from 'styled-components'
 import {
-  // Nature,
-  // Traditional,
   Dark,
 } from './constants/colors'
 
