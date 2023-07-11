@@ -44,7 +44,7 @@ export const Nature = {
 //     colorPrimary: "#F7F9FB",
 //     colorSecondary: "aqua", //"#8FC1E3",
 //     colorDark: "#343a40", //"#31708E",
-//     colorLight: "fff", //"#8FC1E3"
+//     colorLight: "fff", //"#8FC1E3",
 // }
 
 export const Dark = {
