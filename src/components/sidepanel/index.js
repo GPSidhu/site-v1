@@ -12,9 +12,9 @@ import {
 } from "./elements";
 import ResumePdf from "../resume/Gurpreet_Singh.pdf";
 
-const Sidepanel = ({ isOpen, toggle }) => {
+const Sidepanel = ({ isopen, toggle }) => {
 	return (
-		<PanelContainer isOpen={isOpen}>
+		<PanelContainer isopen={isopen}>
 			<Icon onClick={toggle}>
 				<CloseIcon />
 			</Icon>

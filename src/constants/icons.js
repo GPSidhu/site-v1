@@ -8,15 +8,17 @@ import {
 	FaReact,
 	FaAngular,
 	FaSass,
-	FaDatabase,
+    FaDatabase,
+    FaJava
 } from "react-icons/fa";
 
 import {
 	SiCplusplus,
 	SiGraphql,
 	SiLinux,
-	SiJava,
 	SiJavascript,
+    SiTypescript,
+    SiAuth0
 } from "react-icons/si";
 
 // import {
@@ -93,7 +95,7 @@ export const SKILL_ICON_COMP_MAP = {
 		color: "#EBC173",
 	},
 	java: {
-		icon: <SiJava />,
+		icon: <FaJava />,
 		label: "Java",
 		color: "#F89820",
 	},
@@ -106,5 +108,14 @@ export const SKILL_ICON_COMP_MAP = {
 		icon: <FaSass />,
 		label: "Sass",
 		color: "#CD6799",
-	},
+    },
+    typescript: {
+        icon: <SiTypescript />,
+        label: "Typescript",
+        color: "#3178C6"
+    },
+    oauth: {
+        icon: <SiAuth0 />,
+        label: "Oauth2.0"
+    }
 };

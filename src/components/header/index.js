@@ -44,7 +44,7 @@ const Header = ({ toggle }) => {
 	return (
 		<>
 			<IconContext.Provider value={{ color: "#fff" }}>
-				<Nav scrollNav={scrollNav}>
+				<Nav scrollnav={scrollNav ? 1 : 0 }>
 					<HeaderContainer>
 						<Logo to="/" onClick={toggleHome}>
 							GS
