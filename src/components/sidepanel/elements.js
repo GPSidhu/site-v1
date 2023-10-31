@@ -14,8 +14,8 @@ export const PanelContainer = styled.aside`
 	top: 0;
 	left: 0;
 	transition: 0.3s ease-in-out;
-	opacity: ${({ isOpen }) => (isOpen ? "100%" : "0")};
-	top: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
+	opacity: ${({ isopen }) => (isopen ? "100%" : "0")};
+	top: ${({ isopen }) => (isopen ? "0" : "-100%")};
 
 	overflow: hidden;
 	-ms-overflow-style: none; /* IE and Edge */

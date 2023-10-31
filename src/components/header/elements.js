@@ -2,9 +2,16 @@ import styled from 'styled-components'
 import { Link as LinkRouter } from 'react-router-dom'
 import { Link as LinkScroll } from 'react-scroll'
 
-export const Nav = styled.nav`
+// export const nav2 = styled.nav.attrs(props => ({
+//     $scrollnav: props.scrollnav,
+//     $theme: props.theme
+// }))
+export const Nav = styled.nav.attrs(props => ({
+    $scrollnav: props.scrollnav,
+    $theme: props.theme
+}))`
     position: fixed;
-    background: ${({scrollNav, theme}) =>(scrollNav ? theme.main.bgHeader: 'transparent')};
+    background: ${({$scrollnav, $theme}) =>($scrollnav ? $theme.main.bgHeader: 'transparent')};
     width:100%;
     height: 80px;
     display: flex;

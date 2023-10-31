@@ -2,12 +2,32 @@ const data = {
 	id: "experience",
 	title: "Experience",
 	jobs: [
+        {
+            designation: "Software Engineer II",
+            company: {
+                name: "Microsoft",
+                url: "https://www.microsoft.com/en-in",
+                about: "Microsoft is an American multinational tech corporation best known for a variety of business and end-user product offerings ranging from operating system like Windows, productivity application suites like Office 365, XBOX gaming console and so on.",
+                logo: "microsoft.png"
+            },
+            from: "August 2021",
+            to: "October 2023",
+            location: "Noida",
+            tasks: [
+                "Worked in the Fluid Framework Experiences team also known as Microsoft Loop providing collaborative and productivity tools as part of the Office Product Group.",
+                "Responsible for the collaborative effort involving design and development of the features for higher order components to support 3P Data Integrations like Jira, Trello, Github etc. with Microsoft Loop.",
+                "End to end ownership including planning, resolving design ambiguities, development and delivery of some generic and extensible components to be consumed by any other higher order loop components for 3p integrations.",
+                "Worked as an individual contributor as well as leading and owning some key sub-features of the bigger 3p Data integration effort following agile methodology.",
+                "Developed some feature extensions for the AI Suggested Tasks of the Microsoft Teams meeting notes scenarios of Loop components."
+            ],
+            technologies: ["reactjs", "typescript", "rest", "javascript", "oauth"]
+        },
 		{
 			designation: "Senior Software Engineer",
 			company: {
 				name: "Servicenow",
                 url: "https://www.servicenow.com/",
-                about: "ServiceNow is a USA based platform-as-a-service provider, which help companies automate their IT operations and manage digital workflows. Apart from help desk, Servicenow offers a variety of enterprise productivity tools like IT Asset management, IT Operations management etc.",
+                about: "ServiceNow is an American platform-as-a-service provider, which help companies automate their IT operations and manage digital workflows. Apart from help desk, Servicenow offers a variety of enterprise productivity tools like IT Asset management, IT Operations management etc.",
                 logo: "servicenow.png"
 			},
 			from: "July 2018",

@@ -1,6 +1,6 @@
 const data = {
     id: 'projects',
-    title: 'Projects',
+    title: 'Personal Projects',
     projects: [
         {
             title: 'ChessProf',

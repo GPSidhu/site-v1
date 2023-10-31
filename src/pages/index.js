@@ -48,7 +48,7 @@ const Home = () => {
     return (
         <>
             <Header toggle={toggle}/>
-            <Sidepanel isOpen={isOpen} toggle={toggle}/>
+            <Sidepanel isopen={isOpen ? 1 : 0 } toggle={toggle}/>
             <Content data={data}/>
             <Footer {...FooterData}/>
         </>

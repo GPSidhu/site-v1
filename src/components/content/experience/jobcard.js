@@ -82,7 +82,7 @@ const renderCardBody = (job) => {
 	// }
 	return (
 		<div className="job-card-body">
-			{job.company && job.company.about && (
+			{job.company?.about && (
 				<div className="company-info">{job.company.about}</div>
 			)}
 			<Collapser
@@ -90,7 +90,7 @@ const renderCardBody = (job) => {
 				label={`... read more`}
 				content={
 					<ol className="company-tasks">
-						{job.tasks.map((t, i) => (
+						{job.tasks?.map((t, i) => (
 							<li key={`t_${i}`}>
 								{t}
 								{job.taskRefs && job.taskRefs[i] && (
@@ -113,7 +113,7 @@ const renderCardBody = (job) => {
 
 const renderCardFooter = (job) => (
 	<SkillsWrapper>
-		{job.technologies.map((t, i) => (
+		{job.technologies?.map((t, i) => (
 			<Tooltip
 				key={`skill_${i}`}
 				message={SKILL_ICON_COMP_MAP[t] && SKILL_ICON_COMP_MAP[t].label}

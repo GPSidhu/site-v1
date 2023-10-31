@@ -13,7 +13,7 @@ export const CoverContainer = styled.div`
     height: 100vh;
     position: relative;
       
-    :before {
+    &:before {
         content: '';
         position: absolute;
         top: 0;
