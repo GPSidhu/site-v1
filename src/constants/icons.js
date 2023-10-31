@@ -8,14 +8,14 @@ import {
 	FaReact,
 	FaAngular,
 	FaSass,
-    FaDatabase
+    FaDatabase,
+    FaJava
 } from "react-icons/fa";
 
 import {
 	SiCplusplus,
 	SiGraphql,
 	SiLinux,
-	SiJava,
 	SiJavascript,
     SiTypescript,
     SiAuth0
@@ -95,7 +95,7 @@ export const SKILL_ICON_COMP_MAP = {
 		color: "#EBC173",
 	},
 	java: {
-		icon: <SiJava />,
+		icon: <FaJava />,
 		label: "Java",
 		color: "#F89820",
 	},
