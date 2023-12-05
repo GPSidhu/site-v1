@@ -68,6 +68,20 @@ const data = {
 	experience: {
 		title: "Experience",
 		jobs: [
+            // {
+            //     designation: "Software Engineer II",
+            //     company: "Microsoft",
+            //     from: "August, 2021",
+            //     to: "October, 2023",
+            //     location: "Noida",
+            //     tasks: [
+            //         "Worked in the Fluid Framework Experiences team also known as Microsoft Loop providing collaborative and productivity tools as part of the Office Product Group.",
+            //         "Responsible for the collaborative effort involving design and development of the features for higher order components to support 3P Data Integrations like Jira, Trello, Github etc. with Microsoft Loop.",
+            //         "End to end ownership including planning, resolving design ambiguities, development and delivery of some generic and extensible components to be consumed by any other higher order loop components for 3p integrations.",
+            //         "Worked as an individual contributor as well as leading and owning some key sub-features of the bigger 3p Data integration effort following agile methodology.",
+            //         "Developed some feature extensions for the AI Suggested Tasks of the Microsoft Teams meeting notes scenarios of Loop components."
+            //     ]
+            // },
 			{
 				designation: "Senior Software Engineer",
 				company: "Servicenow",

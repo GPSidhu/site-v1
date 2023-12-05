@@ -9,7 +9,8 @@ import {
 	FaAngular,
 	FaSass,
     FaDatabase,
-    FaJava
+    FaJava,
+    FaCodeBranch
 } from "react-icons/fa";
 
 import {
@@ -18,7 +19,8 @@ import {
 	SiLinux,
 	SiJavascript,
     SiTypescript,
-    SiAuth0
+    SiAuth0,
+    SiJest
 } from "react-icons/si";
 
 // import {
@@ -103,7 +105,12 @@ export const SKILL_ICON_COMP_MAP = {
 		icon: <SiJavascript />,
 		label: "Javascript",
 		color: "#F0DB4F",
-	},
+    },
+    jest: {
+        icon: <SiJest />,
+        label: "Jest",
+        color: "#A85E61"
+    },
 	sass: {
 		icon: <FaSass />,
 		label: "Sass",
@@ -117,5 +124,9 @@ export const SKILL_ICON_COMP_MAP = {
     oauth: {
         icon: <SiAuth0 />,
         label: "Oauth2.0"
+    },
+    multithreading: {
+        icon: <FaCodeBranch />,
+        label: "Multithreading"
     }
 };
