@@ -14,13 +14,26 @@ const data = {
             to: "October 2023",
             location: "Noida",
             tasks: [
-                "Worked in the Fluid Framework Experiences team also known as Microsoft Loop providing collaborative and productivity tools as part of the Office Product Group.",
-                "Responsible for the collaborative effort involving design and development of the features for higher order components to support 3P Data Integrations like Jira, Trello, Github etc. with Microsoft Loop.",
-                "End to end ownership including planning, resolving design ambiguities, development and delivery of some generic and extensible components to be consumed by any other higher order loop components for 3p integrations.",
-                "Worked as an individual contributor as well as leading and owning some key sub-features of the bigger 3p Data integration effort following agile methodology.",
-                "Developed some feature extensions for the AI Suggested Tasks of the Microsoft Teams meeting notes scenarios of Loop components."
+                "Contributor in Microsoft Loop team by developing and owning 3 components from scratch while maintaining and enhancing 2+ productionised components and features.",
+                "Liaised with project managers, designers and other stakeholders to design and deliver the new Microsoft Loop components for third party (3P) data integrations of Jira, Trello and GitHub for Microsoft wide audience as well as General Availability.",
+                "Spearheaded the end-to-end ownership of planning, design resolution, development, and delivery of highly scalable and reusable components utilized by higher-order 3P Loop components, resulting in increased development efficiency and reduced time-to-market.",
+                "Lead the end to end design, development and delivery of a highly flexible and generic people component in the Loop ecosystem responsible for retrieving, storing and rendering contextual user data for 3P components.",
+                "Developed re-usable and generic components for handling user interactions involving authentication and syncing flows of 3P components.",
+                "Responsible for complete development to production delivery of the above components with WCAG compliance, unit and functional tests, internationalization and localization.",
+                "Enhanced the feature for displaying suggested tasks that are generated from Microsoft Teams’ meeting transcripts using AI and converting them into Loop’s Task list component for better user visibility, interaction and transferring feedback back to the AI model."
             ],
-            technologies: ["reactjs", "typescript", "rest", "javascript", "oauth"]
+            taskRefs: {
+                // add a ref link to end of above task
+                0: {
+                    label: "Microsoft Loop",
+                    link: "https://www.microsoft.com/en-us/microsoft-loop"
+                },
+                1: {
+                    label: "View",
+                    link: "https://twitter.com/MicrosoftLoop/status/1691087283477229568"
+                }
+            },
+            technologies: ["reactjs", "typescript", "rest", "javascript", "oauth", "jest"]
         },
 		{
 			designation: "Senior Software Engineer",
@@ -34,24 +47,38 @@ const data = {
 			to: "December 2020",
 			location: "Hyderabad",
 			tasks: [
-				"Worked in the On-Call schedule management under core ITSM dev team starting from Madrid till Quebec release of Servicenow.",
-				"New York: Enhanced On-Call ui to support custom escalations and worked to integrate Major incident with alert management modules.",
-				"Orlando: Worked in a team to develop fully functional calendar component in seismic. Spiked to support MS Teams as a channel for On-call escalations.",
-				"Paris: Developed On-Call Live Escalation Tracking(UI). Worked on integrations to get the ability to create incidents in Servicenow via slash commands from Slack.",
-				"Quebec: Worked in Project AIR (Automated Incident Response) a lightweight easy to buy/use version of Servicenow for SREs. Apart from leading the effort to modify and redesign on-call features wherever applicable to uptake in AIR, was also responsible for story planning, pointing, code reviews and knowledge transfers regarding On-call management.",
+				"Delivered features and enhancements as an individual contributor in the core IT Service Management engineering team of 7+ engineers across 4+ releases of ServiceNow platform.",
+				"Spearheaded the development of On-call management module for a new lightweight all-in-one Incident Management Response Platform called Lightstep. As a key contributor and SME, led the story planning, pointing, development and mentoring efforts contributing to higher team efficiency and reducing go to market times.",
+				"Contributed in developing fully functional and re-usable Now-Calendar component from scratch using the in-house developed React like framework that allowed incident managers and stakeholders to see on-call events and plans in different calendar views.",
+				"Enhanced user interfaces integrated in On-Call scheduling module which further helped incident managers to add more customized escalation plans to help reduce MTTR.",
+                "Lead the Slack Integration effort to reduce incident response times by enabling users to do a seamless bidirectional integration of the platform. This enabled them to create dedicated channels for incidents so that responders can collaborate seamlessly.",
+                "Developed the interface to Track Live On-call Escalations happening in real time which greatly improved the existing capabilities, reducing response times and providing users with real time escalation updates.",
+                "Received the best Team Player award of Q3 2020 for my contributions."
 			],
 			taskRefs: {
-				// add a ref link to end of above task
+                // add a ref link to end of above task
+                1: {
+                    label: "Lightstep",
+                    link: "https://www.servicenow.com/products/observability.html"
+                },
 				2: {
-					label: "View",
+					label: "Calendar doc",
 					link:
-						"https://developer.servicenow.com/dev.do#!/reference/now-experience/quebec/now-components/now-calendar/overview",
+						"https://developer.servicenow.com/dev.do#!/reference/next-experience/vancouver/now-components/now-calendar/usage",
 				},
 				3: {
-					label: "View",
+					label: "On-Call Scheduling",
 					link:
-						"https://docs.servicenow.com/bundle/paris-it-service-management/page/administer/on-call-scheduling/task/track-escalation-progress-oncall.html",
-				},
+						"https://docs.servicenow.com/bundle/vancouver-it-service-management/page/administer/on-call-scheduling/concept/c_OnCallScheduling.html",
+                },
+                4: {
+                    label: "Slack Integration",
+                    link: "https://docs.servicenow.com/bundle/vancouver-it-service-management/page/product/itsm-tcm/concept/im-slack-collaboration.html"
+                },
+                5: {
+                    label: "View",
+                    link: "https://docs.servicenow.com/bundle/vancouver-it-service-management/page/administer/on-call-scheduling/task/track-escalation-progress-oncall.html"
+                }
 			},
 			achievements: [
 				{
@@ -59,7 +86,7 @@ const data = {
 					value: "Team Player",
 				},
 			],
-			technologies: ["angularjs", "nodejs", "reactjs", "graphql", "sass"],
+			technologies: ["angularjs", "nodejs", "reactjs", "graphql", "sass", "html"],
 		},
 		{
 			designation: "IT Senior Consultant",
@@ -73,10 +100,10 @@ const data = {
 			to: "July 2018",
 			location: "Hyderabad",
 			tasks: [
-				"Designed and developed a generic framework for real time data migration between on-premise and cloud instances while handling consistency and synchronization",
-				"Responsible for understanding and writing business rules as per the requirements for project accounting and revenue generation processes as part of migration to cloud",
-				"Developed a ui dashboard from scratch using Oracle Apex ad javascript for optimizing and reducing time to manage resources and schedules",
-				"Worked on a variety of different technologies such as java, rest, soap, pl/sql, quartz scheduler",
+				"Lead the design and development of a framework for real time data migration between on-premise and cloud instances as part of Oracle’s cloud migration for internal business units. Proposed and implemented solutions and resolved design ambiguities while adhering to strict timelines and available resources.",
+				"Collaborated with project managers and stakeholders to do technical feasibility analysis on business requirements and converting them into business rules using procedural SQL and other Oracle tools like BI publisher.",
+				"Developed a dashboard in Oracle Apex and vanilla JS for reducing the management time and increasing efficiency of resource managers by enabling crud operation and complex time sheet visualizations all in single screen.",
+				"Hands on experience with Java, Rest, Soap, PL/SQL, database query optimization and other Oracle tools while working on different projects.",
 			],
 			achievements: [],
 			technologies: ["java", "plsql", "javascript"],
@@ -93,12 +120,18 @@ const data = {
 			to: "April 2015",
 			location: "Mumbai",
 			tasks: [
-				"Was involved in the development of LTE-HSS(Home Subscriber Server) module of the R4G project undertaken by reliance industries",
-				"Developed a C++ application for viewing HSS server logs distributed over multiple machines on single screen using pthreads and tcp sockets",
-				"Worked on some core backend technologies like C/C++, Diameter (protocol), Linux, Wireshark",
-			],
+				"Was involved in the development of LTE-HSS(Home Subscriber Server) module of the R4G project undertaken by reliance industries.",
+				"Developed a C++ application for viewing HSS server logs distributed over multiple machines on single screen using Posix threads and TCP sockets.",
+				"Acquired proficiency in some core technologies like C/C++, multi-threading, Diameter (protocol), Linux and Wireshark.",
+            ],
+            taskRefs: {
+                0: {
+                    label: "View",
+                    link: "https://www.ril.com/businesses/digital-services-jio"
+                }
+            },
 			achievements: [],
-			technologies: ["c++", "linux"],
+			technologies: ["c++", "linux", "multithreading"],
 		},
 	],
 	lightBg: false,
